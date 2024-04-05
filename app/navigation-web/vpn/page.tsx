@@ -1,7 +1,6 @@
 import { Paragraph } from "@/components/Paragraph";
 import { Title } from "@/components/Title";
 import ToolGrid from "@/components/ToolGrid";
-import { InfoBox } from "@/components/InfoBox";
 import { Title2 } from "@/components/Title2";
 
 export default function Page() {

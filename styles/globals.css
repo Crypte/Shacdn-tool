@@ -60,6 +60,9 @@
   }
 }
 
+.container{
+  max-width: 1200px;
+}
 
  /* Carrousel */
 /* Default styles for larger screens */

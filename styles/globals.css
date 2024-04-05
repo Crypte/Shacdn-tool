@@ -24,7 +24,7 @@
     --border: 240 5.9% 90%;
     --input: 240 5.9% 90%;
     --ring: 142.1 76.2% 36.3%;
-    --radius: 0.75rem;
+    --radius: 0.6rem;
   }
 
   .dark {
@@ -106,3 +106,41 @@
       transform: translateX(-200%);
   }
 }
+
+ /* welcome page */
+.gradient-background {
+  width: calc(100vw / 1.5);
+  height: calc(100vh / 1.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  overflow: hidden;
+  filter: blur(40px);
+  pointer-events: none;
+}
+
+.red{
+background: radial-gradient(ellipse at center, rgba(0, 255, 110, 0.27) 0%, rgba(255, 255, 255, 0.11) 70%);
+animation: rotateBackground 40s linear infinite;
+}
+
+.blue{
+background: radial-gradient(ellipse at center, rgba(249, 105, 15, 0.27) 0%, rgba(255, 255, 255, 0.11) 70%);
+animation: rotateBackground 20s linear infinite;
+}
+
+.green{
+background: radial-gradient(ellipse at center, rgba(98, 215, 219, 0.27) 0%, rgba(255, 255, 255, 0.11) 70%);
+animation: rotateBackground 10s linear infinite;
+}
+
+@keyframes rotateBackground {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }}

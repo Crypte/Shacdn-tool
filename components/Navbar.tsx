@@ -9,7 +9,7 @@ import { Button } from "./ui/button";
 export const Navbar = () => {
 
   return (
-    <div className="fixed w-full py-2 xl:block hidden border border-b-foreground/10 bg-background">
+    <div className="fixed w-full py-2 xl:block hidden border-b border-foreground/10 backdrop-blur-xl bg-background/40">
       <nav className="container flex items-center justify-between rounded-xl">
         <Link href={"/"} className="hover:opacity-70 transition h-full mr-1.5">
           <Image className="rounded-md hidden dark:block" src={'/logo_app/logoblack.png'} width={39} height={39} alt="logo" />

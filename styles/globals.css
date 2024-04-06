@@ -6,6 +6,7 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
+    --backgroundgradient: rgb(255,255,255);
     --foreground: 240 10% 3.9%;
     --card: 0 0% 100%;
     --card-foreground: 240 10% 3.9%;
@@ -16,7 +17,7 @@
     --secondary: 240 4.8% 95.9%;
     --secondary-foreground: 240 5.9% 10%;
     --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
+    --muted-foreground: 222.9, 6.7%, 20.6%;
     --accent: 240 4.8% 95.9%;
     --accent-foreground: 240 5.9% 10%;
     --destructive: 0 84.2% 60.2%;
@@ -29,6 +30,7 @@
 
   .dark {
     --background: 20 14.3% 4.1%;
+    --backgroundgradient: rgb(12,10,9);
     --foreground: 0 0% 95%;
     --card: 24 9.8% 10%;
     --card-foreground: 0 0% 95%;
@@ -87,8 +89,8 @@
 
 
 .gradient-background {
-  width: calc(100vw / 1.5);
-  height: calc(100vh / 1.5);
+  width: calc(100vw / 3);
+  height: calc(100vh / 3);
   position: absolute;
   top: 0;
   left: 0;
@@ -96,9 +98,9 @@
   bottom: 0;
   margin: auto;
   overflow: hidden;
-  z-index: -1000;
-  filter: blur(40px);
+  filter: blur(125px);
   pointer-events: none;
+  z-index: -1000;
 }
 
 @keyframes slide {
@@ -110,34 +112,19 @@
   }
 }
 
- /* welcome page */
-.gradient-background {
-  width: calc(100vw / 1.5);
-  height: calc(100vh / 1.5);
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  overflow: hidden;
-  filter: blur(40px);
-  pointer-events: none;
+.red {
+  background: radial-gradient(ellipse at center, rgba(0, 255, 128, 0.322) 0%, var(--backgroundgradient) 100%);
+  animation: rotateBackground 40s linear infinite;
 }
 
-.red{
-background: radial-gradient(ellipse at center, rgba(0, 255, 110, 0.27) 0%, rgba(255, 255, 255, 0.11) 70%);
-animation: rotateBackground 40s linear infinite;
+.blue {
+  background: radial-gradient(ellipse at center, rgba(15, 175, 249, 0.267) 0%, var(--background-gradient)100%);
+  animation: rotateBackground 20s linear infinite;
 }
 
-.blue{
-background: radial-gradient(ellipse at center, rgba(249, 105, 15, 0.27) 0%, rgba(255, 255, 255, 0.11) 70%);
-animation: rotateBackground 20s linear infinite;
-}
-
-.green{
-background: radial-gradient(ellipse at center, rgba(98, 215, 219, 0.27) 0%, rgba(255, 255, 255, 0.11) 70%);
-animation: rotateBackground 10s linear infinite;
+.green {
+  background: radial-gradient(ellipse at center, rgba(98, 219, 138, 0.267) 0%, var(--background-gradient) 100%);
+  animation: rotateBackground 10s linear infinite;
 }
 
 @keyframes rotateBackground {

@@ -31,7 +31,7 @@ export const Faq = () => {
     <div>
       {questionsAndAnswers.map((qa, index) => {
         return (
-          <Accordion type="single" collapsible key={index}>
+          <Accordion type="single" collapsible key={index} className="mt-4">
             <AccordionItem value={`${index + 1}`}>
               <AccordionTrigger>{qa.question}</AccordionTrigger>
             <AccordionContent>

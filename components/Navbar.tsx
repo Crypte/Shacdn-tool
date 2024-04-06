@@ -34,12 +34,12 @@ export const Navbar = () => {
           ))}
         </ul>
 
-        <div className="flex items-center gap-2 h-full">
-        <Link href="/bon-plan" target="blank" className="hover:opacity-70 flex items-center justify-center p-2 transition ">
-        <BsTwitterX size={25} />
+        <div className="flex items-center gap-3 h-full">
+        <Link href="/bon-plan" target="blank" className="p-2 ">
+        <BsTwitterX size={20} />
         </Link>
 
-          <Button asChild className="flex items-center justify-center h-full px-3 rounded-md transition hover:opacity-70">
+          <Button asChild>
             <Link href={'/faq'}>
             FAQ
             </Link>

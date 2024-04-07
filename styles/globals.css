@@ -110,7 +110,7 @@
 }
 
 @media screen and (max-width : 1024px){
-  html{
+  p,h1,h2,h3,h4,span{
       font-size: 80%;
       overscroll-behavior: none;
   }

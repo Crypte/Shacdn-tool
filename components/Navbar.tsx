@@ -12,8 +12,8 @@ export const Navbar = () => {
     <div className="fixed w-full py-2 xl:block hidden border-b border-foreground/10 backdrop-blur-xl bg-background/40">
       <nav className="container flex items-center justify-between rounded-xl">
         <Link href={"/"} className="hover:opacity-70 transition h-full mr-1.5">
-          <Image className="rounded-md hidden dark:block" src={'/logo_app/logoblack.png'} width={30} height={30} alt="logo" />
-          <Image className="rounded-md dark:hidden" src={'/logo_app/logowhite.png'} width={30} height={30} alt="logo" />
+          <Image className="rounded-md hidden dark:block" src={'/logo_app/logoblack.png'} width={39} height={39} alt="logo" />
+          <Image className="rounded-md dark:hidden" src={'/logo_app/logowhite.png'} width={39} height={39} alt="logo" />
         </Link>
         <ul className="gap-1 flex">
           {NAV_BAR.map((link) => (
@@ -37,7 +37,7 @@ export const Navbar = () => {
         <div className="flex items-center gap-3 h-full">
         <Button variant={'outline'} size={'icon'} asChild>
           <Link href="/bon-plan" target="blank">
-            <BsTwitterX className="h-[1.2rem] w-[1.2rem]" />
+            <BsTwitterX className="h-[1.5rem] w-[1.5rem]" />
           </Link>
           </Button>
 

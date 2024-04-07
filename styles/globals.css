@@ -109,6 +109,13 @@
   }
 }
 
+@media screen and (max-width : 1024px){
+  html{
+      font-size: 80%;
+      overscroll-behavior: none;
+  }
+}
+
 @keyframes slide {
   from {
       transform: translateX(0);

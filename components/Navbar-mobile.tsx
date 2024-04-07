@@ -72,10 +72,10 @@ export const Navbarmobile= () => {
                   key={item.label}
                   href={item.href}
                 >
-                  <label className="py-2 text-md text-center cursor-pointer transition duration-300 ease-in-out flex items-center text-muted-foreground">
+                  <label className="py-2 text-center cursor-pointer transition duration-300 ease-in-out flex items-center text-muted-foreground">
                     <div className="flex items-center gap-2">
                     <span className="p-1.5"><item.icon size={20}/></span>
-                      <span className="text-sm">{item.label}</span>
+                      <span className="text-md">{item.label}</span>
                     </div>
                   </label>
                 </Link>

@@ -67,9 +67,9 @@ const Toolcard = ({ id }: ToolcardProps) => {
             )}
             </div>
             </div>
-            <div className="text-mygrey text-sm leading-6 text-light-grey text-justify">
-              <p>{Tool.description}</p>
-            </div>
+           
+              <p className="text-sm leading-7 text-foreground-muted text-justify">{Tool.description}</p>
+        
 
             {Tool.offer && (
               <p

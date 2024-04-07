@@ -8,7 +8,7 @@ type ToolGridProps = {
 
 const ToolGrid = ({ toolIds }: ToolGridProps) => {
   return (
-    <div className="md:grid md:grid-cols-2 gap-5 my-6">
+    <div className="md:grid md:grid-cols-2 gap-5 my-6 flex flex-col">
       {toolIds.map((id) => (
         <Toolcard key={id} id={id}  />
       ))}

@@ -59,23 +59,22 @@ export const Navbarmobile= () => {
   
       
       <SheetContent>
+      <SheetTitle>Menu</SheetTitle>
       
-      <SheetTitle>Menu </SheetTitle>
-      
-        <ScrollArea className="h-full py-6">
+        <ScrollArea className="h-full my-6 pb-10">
       {NAV_BAR.map((link) => (
             <div key={link.key}>
-              <h2 className="my-3 pb-2 border-b text-foreground font-bold mt-5">{link.label}</h2>
+              <h2 className="mb-3 text-xl pb-2 border-b text-foreground font-bold">{link.label}</h2>
               {link.submenu.map((item) => (
                 <SheetClose asChild>
                 <Link
                   key={item.label}
                   href={item.href}
                 >
-                  <label className="py-2 text-center cursor-pointer transition duration-300 ease-in-out flex items-center text-muted-foreground">
+                  <label className="py-2 text-center cursor-pointer transition duration-300 ease-in-out flex items-center text-muted-foreground text-lg">
                     <div className="flex items-center gap-2">
                     <span className="p-1.5"><item.icon size={20}/></span>
-                      <span className="text-md">{item.label}</span>
+                      <span>{item.label}</span>
                     </div>
                   </label>
                 </Link>
@@ -83,6 +82,7 @@ export const Navbarmobile= () => {
               ))}
             </div>
           ))}
+        
           </ScrollArea>
       </SheetContent>
     </Sheet>

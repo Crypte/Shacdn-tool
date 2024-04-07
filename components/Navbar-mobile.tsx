@@ -63,7 +63,7 @@ export const Navbarmobile= () => {
       
         <ScrollArea className="h-full my-6 pb-10">
       {NAV_BAR.map((link) => (
-            <div key={link.key}>
+            <div key={link.key} className="mb-3">
               <h2 className="mb-3 text-xl pb-2 border-b text-foreground font-bold">{link.label}</h2>
               {link.submenu.map((item) => (
                 <SheetClose asChild>

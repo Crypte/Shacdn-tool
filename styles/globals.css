@@ -103,6 +103,12 @@
   z-index: -1000;
 }
 
+@media only screen and (max-width: 600px) {
+  .scroller {
+      max-width: 100%;
+  }
+}
+
 @keyframes slide {
   from {
       transform: translateX(0);

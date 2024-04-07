@@ -20,7 +20,7 @@ export const Pageheader: React.FC<PageheaderProps> = () => {
   const pagesubtitle = categoryActuelle.subtitle;
 
   return (
-    <div className="text-center mt-44 mb-24">
+    <div className="text-center mt-40 mb-24">
       <h2 className="mb-2 text-primary text-lg ">{pagetitle}</h2>
       <h1 className='text-4xl font-bold'>{pagesubtitle}</h1>
     </div>

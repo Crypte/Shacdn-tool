@@ -6,7 +6,7 @@ import { Carrousel } from "./Carrousel";
 
 export const Herosection = () => {
     return (
-        <div className="mt-[400px] flex items-center relative">
+        <div className="mt-44 flex items-center relative">
             <div className="container flex flex-col items-center overflow-hidden">
                 <div className="text-center">
                     <div className="gradient-background red"></div>

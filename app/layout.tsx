@@ -4,6 +4,7 @@ import "../styles/globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Navbarmobile } from "@/components/Navbar-mobile";
 import { ThemeProvider } from "@/components/Theme-provider";
+import { Navbarmobile2 } from "@/components/Navbar-mobile2";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,7 +28,7 @@ export default function RootLayout({
             disableTransitionOnChange
           >
       <div className='fixed top-0 z-50 '>
-      <Navbarmobile />
+      <Navbarmobile2/>
       <Navbar />
         </div>
       {children}

@@ -1,6 +1,7 @@
 'use client'
 
 import { ThemeSwitch } from "./Theme-switch";
+import { BsTwitterX } from "react-icons/bs";
 
 import {
   Sheet,
@@ -38,6 +39,16 @@ export const Navbarmobile= () => {
           </div>
           <div className="flex items-center gap-2">
           <ThemeSwitch/>
+          <Button variant={'outline'} size={'icon'} asChild>
+          <Link href="/bon-plan" target="blank">
+          <BsTwitterX className="h-[1.2rem] w-[1.2rem]" />
+          </Link>
+          </Button>
+          <Button asChild>
+            <Link href={'/faq'}>
+            FAQ
+            </Link>
+        </Button>
           <SheetTrigger asChild>
             <Button variant="outline" size={'icon'}><Menu/></Button>
           </SheetTrigger>
@@ -48,21 +59,23 @@ export const Navbarmobile= () => {
   
       
       <SheetContent>
-      <SheetTitle>Menu</SheetTitle>
-        <ScrollArea className="h-full">
+      
+      <SheetTitle>Menu </SheetTitle>
+      
+        <ScrollArea className="h-full py-6">
       {NAV_BAR.map((link) => (
             <div key={link.key}>
-              <h2 className="my-3 pb-2 border-b text-foreground font-bol mt-6">{link.label}</h2>
+              <h2 className="my-3 pb-2 border-b text-foreground font-bold mt-5">{link.label}</h2>
               {link.submenu.map((item) => (
                 <SheetClose asChild>
                 <Link
                   key={item.label}
                   href={item.href}
                 >
-                  <label className="py-4 text-md text-center cursor-pointer transition duration-300 ease-in-out flex items-center" htmlFor={item.label}>
-                    <div className="flex items-center gap-3">
-                    <span className="p-1.5  rounded-lg text-muted-foreground"><item.icon size={20}/></span>
-                      <span>{item.label}</span>
+                  <label className="py-2 text-md text-center cursor-pointer transition duration-300 ease-in-out flex items-center text-muted-foreground">
+                    <div className="flex items-center gap-2">
+                    <span className="p-1.5"><item.icon size={20}/></span>
+                      <span className="text-sm">{item.label}</span>
                     </div>
                   </label>
                 </Link>

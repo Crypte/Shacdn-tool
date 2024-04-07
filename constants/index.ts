@@ -24,8 +24,8 @@ export const NAV_BAR = [
         label: 'Sécurité',
         key: 'Sécurité',
         submenu: [
-            { label: 'Gestionnaire de mots de passe', icon: FormInput, href:'/securite/gestionnaire-mdp',title: "Meilleurs gestionnaires de mots de passe.", subtitle: "N'oubliez jamais un mot de passe à nouveau.",  },
-            { label: 'Authentification à deux facteurs', icon: CheckCheck, href:'/securite/2FA', title: "Authentification à deux facteurs (2FA).", subtitle: "Une couche supplémentaire de sécurité."  },
+            { label: 'Mots de passe', icon: FormInput, href:'/securite/gestionnaire-mdp',title: "Meilleurs gestionnaires de mots de passe.", subtitle: "N'oubliez jamais un mot de passe à nouveau.",  },
+            { label: 'Auth à deux facteurs', icon: CheckCheck, href:'/securite/2FA', title: "Authentification à deux facteurs (2FA).", subtitle: "Une couche supplémentaire de sécurité."  },
             { label: 'Antivirus', icon: ShieldCheck, href:'/securite/antivirus',title: "Antivirus les plus efficaces", subtitle: "Votre meilleur allié."  },
             { label: 'Matériel', icon: CircuitBoard, href:'/securite/materiel',title: "Outils de sécurité matérielle", subtitle: "Minimisez les risques."  }
         ]

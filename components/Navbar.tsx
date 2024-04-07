@@ -35,9 +35,11 @@ export const Navbar = () => {
         </ul>
 
         <div className="flex items-center gap-3 h-full">
-        <Link href="/bon-plan" target="blank" className="p-2 ">
-        <BsTwitterX size={20} />
-        </Link>
+        <Button variant={'outline'} size={'icon'} asChild>
+          <Link href="/bon-plan" target="blank">
+            <BsTwitterX className="h-[1.2rem] w-[1.2rem]" />
+          </Link>
+          </Button>
 
           <Button asChild>
             <Link href={'/faq'}>

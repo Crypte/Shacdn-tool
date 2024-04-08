@@ -16,16 +16,16 @@ export const Navbar = () => {
           <Image className="rounded-md dark:hidden" src={'/logo_app/logowhite.png'} width={39} height={39} alt="logo" />
         </Link>
         <ul className="gap-1 flex">
-          {NAV_BAR.map((link) => (
-            <li key={link.key} className='group p-1.5 rounded-lg flex gap-1.5 relative items-center cursor-default '>
-              <span className="transition text-muted-foreground group-hover:text-primary">{link.label}</span>
+          {NAV_BAR.map((item) => (
+            <li key={item.key} className='group p-1.5 rounded-lg flex gap-1.5 relative items-center cursor-default '>
+              <span className="transition text-muted-foreground group-hover:text-primary">{item.label}</span>
               <ChevronDown size={20} className="group-hover:rotate-180 transition text-muted-foreground group-hover:text-primary"/>
               <div className="top-full group-hover:pointer-events-auto pointer-events-none absolute pt-7 transition opacity-0 group-hover:opacity-100 duration-200">
                 <div className="rounded-2xl scale-95 group-hover:scale-100 flex flex-col w-fit shadow shadow-foreground/30 p-3 transition duration-200 bg-background">
-                  {link.submenu.map((item) => (
-                    <Link key={item.label} href={item.href} className="p-2 whitespace-nowrap hover:bg-foreground/5 rounded-md flex items-center gap-4">
-                      <span className="p-1.5 bg-foreground/10 rounded-lg"><item.icon size={25}/></span>
-                      {item.label}
+                  {item.submenu.map((item2) => (
+                    <Link key={item2.label} href={item2.href} className="p-2 whitespace-nowrap hover:bg-foreground/5 rounded-md flex items-center gap-4">
+                      <span className="p-1.5 bg-foreground/10 rounded-lg"><item2.icon size={25}/></span>
+                      {item2.label}
                     </Link>
                   ))}
                 </div>
@@ -42,8 +42,8 @@ export const Navbar = () => {
           </Button>
 
           <Button asChild>
-            <Link href={'/faq'}>
-            FAQ
+            <Link href={'/info'}>
+            Info
             </Link>
         </Button>
         <ThemeSwitch/>

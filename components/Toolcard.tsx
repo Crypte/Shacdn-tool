@@ -1,5 +1,3 @@
-'use client'
-
 import Image from "next/image";
 import { TOOL_LIST } from "@/constants/tool_en";
 import Link from "next/link";
@@ -29,15 +27,15 @@ const Toolcard = ({ id }: ToolcardProps) => {
     <Card>
     <div className="relative rounded-2xl mb-4 lg:m-0 group transition-all">
       <Link href={Tool.link} target="_blank">
-          <div key={Tool.id} className="p-5 gap-5 flex flex-col">
+          <div className="p-5 gap-5 flex flex-col">
             <div className="relative">
             <AspectRatio ratio={16 / 9}>
               <Image placeholder = 'blur' blurDataURL="https://placehold.co/1920x1080" className="rounded-lg object-cover" src={Tool.url_img} alt="logo" fill/>
               </AspectRatio>
               <div className="flex w-fit gap-1.5 flex-wrap absolute bottom-0 left-0 right-0 p-4">
                 {Tool.badge &&
-                  Tool.badge.map((badge) => (
-                    <Badge variant={badge} key={badge} />
+                  Tool.badge.map((badge,index) => (
+                    <Badge variant={badge} key={index} />
                   ))}
               </div>
             </div>
@@ -60,8 +58,8 @@ const Toolcard = ({ id }: ToolcardProps) => {
             
               {Tool.platform && (
               <div className="pointer-events-none font-bold p-1 text-main flex gap-3 items-center border-2 rounded-full w-fit ">
-                {Tool.platform.map((platform) => (
-                  <Platform variant={platform} key={platform} />
+                {Tool.platform.map((platform, index) => (
+                  <Platform variant={platform} key={index} />
                 ))}
               </div>
             )}

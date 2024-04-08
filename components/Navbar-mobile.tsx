@@ -1,5 +1,3 @@
-'use client'
-
 import { ThemeSwitch } from "./Theme-switch";
 import { BsTwitterX } from "react-icons/bs";
 
@@ -45,8 +43,8 @@ export const Navbarmobile= () => {
           </Link>
           </Button>
           <Button asChild>
-            <Link href={'/faq'}>
-            FAQ
+            <Link href={'/info'}>
+            Info
             </Link>
         </Button>
           <SheetTrigger asChild>
@@ -62,13 +60,13 @@ export const Navbarmobile= () => {
       <SheetTitle>Menu</SheetTitle>
       
         <ScrollArea className="h-full my-6 pb-10">
-      {NAV_BAR.map((link) => (
-            <div key={link.key} className="mb-3">
+      {NAV_BAR.map((link,index) => (
+            <div key={index} className="mb-3">
               <h2 className="mb-3 text-xl pb-2 border-b text-foreground font-bold">{link.label}</h2>
-              {link.submenu.map((item) => (
+              {link.submenu.map((item,index) => (
                 <SheetClose asChild>
                 <Link
-                  key={item.label}
+                  key={index}
                   href={item.href}
                 >
                   <label className="py-2 text-center cursor-pointer transition duration-300 ease-in-out flex items-center text-muted-foreground text-lg">

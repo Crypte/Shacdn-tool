@@ -30,7 +30,9 @@ export default function RootLayout({
       <Navbarmobile/>
       <Navbar />
         </div>
+      <div className='container mt-28'>
       {children}
+      </div>
       </ThemeProvider>
     </body>
   </html>

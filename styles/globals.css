@@ -125,6 +125,23 @@
   }
 }
 
+.danger{
+  @apply bg-red-400/20 border-[#EF4C62]
+}
+
+.warning{
+  @apply bg-yellow-400/20 border-[#FDC02A]
+}
+
+.information{
+  @apply bg-blue-400/20 border-[#346DDB]
+}
+
+.check{
+  @apply bg-green-400/20 border-[#33D29D]
+}
+
+
 .red {
   background: radial-gradient(ellipse at center, rgba(0, 255, 128, 0.322) 0%, var(--backgroundgradient) 100%);
   animation: rotateBackground 40s linear infinite;

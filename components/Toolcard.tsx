@@ -73,7 +73,7 @@ const Toolcard = ({ id }: ToolcardProps) => {
 
             {Tool.offer && (
               <p
-                className="justify-center rounded-md transition p-1.5 text-sm border border-theme-color bg-white text-black flex gap-2 items-center font-semibold">
+                className="justify-center rounded-md transition p-1.5 text-sm border border-primary text-foreground flex gap-2 items-center font-semibold">
                 Parrainage : {''}
                 {Tool.offer}
               </p>

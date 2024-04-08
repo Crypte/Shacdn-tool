@@ -14,19 +14,19 @@ export const InfoBox = ({ children, variant,title }:InfoBoxProps) => {
   switch (variant) {
     case "danger":
       boxClass = "danger";
-      boxIcon = <AlertTriangle style={{ color: "#EF4C62" }} size={30}  />;
+      boxIcon = <AlertTriangle style={{ color: "#EF4C62" }}/>;
       break;
     case "warning":
       boxClass = "warning";
-      boxIcon = <AlertCircle style={{ color: "#FDC02A" }} size={30}  />;
+      boxIcon = <AlertCircle style={{ color: "#FDC02A" }} />;
       break;
     case "information":
       boxClass = "information";
-      boxIcon = <Info style={{ color: "#346DDB" }} size={30}  />;
+      boxIcon = <Info style={{ color: "#346DDB" }}  />;
       break;
     case "check":
       boxClass = "check";
-      boxIcon = <CheckCircle2 style={{ color: "#33D29D" }} size={30} />;
+      boxIcon = <CheckCircle2 style={{ color: "#33D29D" }}/>;
       break;
     default:
       boxClass = "";
@@ -34,9 +34,9 @@ export const InfoBox = ({ children, variant,title }:InfoBoxProps) => {
   }
 
   return (
-    <div className={`infobox border-l-4 w-fit py-3 px-3.5 rounded-xl my-2 text-main-grey ${boxClass}`}>
+    <div className={`infobox border-l-4 w-fit py-3 px-3.5 rounded-xl my-3 text-foreground ${boxClass}`}>
       <div className="flex items-center">
-        <div className="flex text-3xl">
+        <div className="flex text-3xl w-6 h-6">
           {boxIcon}
         </div>
         <div className="ml-4">

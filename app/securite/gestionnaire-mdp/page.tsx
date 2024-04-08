@@ -12,6 +12,7 @@ export default function Page() {
 
   return (
     <div>
+        <H1 subtitle={"N'oubliez jamais plus un mot de passe."}>Gestion de mot de passe</H1>
         <H2>Keepass app</H2>
 
         <InfoBox title="Qu'est ce que Keepass?" variant="information">

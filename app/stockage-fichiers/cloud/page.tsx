@@ -10,7 +10,7 @@ export default function Page() {
 
   return (
       <div>
-          <H1>Services cloud</H1>
+          <H1 subtitle={'Stockez tout ce que vous voulez.'}>Services cloud</H1>
           <P>A CEX Centralized Exchange is a centralized cryptocurrency trading platform that is controlled by a third-party entity. Users can buy, sell, and trade digital assets on these platforms relatively easily and quickly. CEXs typically offer high liquidity, enabling fast transactions and competitive prices. However, CEXs have drawbacks such as the need to entrust funds to the platform, which can pose risks of hacking, fraud, or loss of control over ones assets.</P>
 
           <InfoBox variant="check">CEX are the best choice if you only want to invest without worrying about storage and security</InfoBox>

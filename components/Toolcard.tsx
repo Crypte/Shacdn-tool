@@ -30,7 +30,7 @@ const Toolcard = ({ id }: ToolcardProps) => {
           <div className="p-5 gap-5 flex flex-col">
             <div className="relative">
             <AspectRatio ratio={16 / 9}>
-              <Image placeholder = 'blur' blurDataURL="https://placehold.co/1920x1080" className="rounded-lg object-cover" src={Tool.url_img} alt="logo" fill/>
+              <Image placeholder = 'blur' blurDataURL="https://placehold.co/1920x1080" className="rounded-lg object-cover" src={Tool.url_img} alt="logo" fill loading="lazy"/>
               </AspectRatio>
               <div className="flex w-fit gap-1.5 flex-wrap absolute bottom-0 left-0 right-0 p-4">
                 {Tool.badge &&
@@ -40,7 +40,7 @@ const Toolcard = ({ id }: ToolcardProps) => {
               </div>
             </div>
         
-            <div className="flex ml-4">
+            <div className="flex lg:ml-4">
               <div className="mr-5 w-18 h-18">
                 <Image
                   className="rounded-2xl"
@@ -71,7 +71,7 @@ const Toolcard = ({ id }: ToolcardProps) => {
 
             {Tool.offer && (
               <p
-                className="justify-center rounded-md transition p-1.5 text-sm border border-primary text-foreground flex gap-2 items-center font-semibold">
+                className="justify-center text-center rounded-md transition p-2 text-sm border border-primary text-foreground flex gap-2 items-center font-semibold">
                 Parrainage : {''}
                 {Tool.offer}
               </p>

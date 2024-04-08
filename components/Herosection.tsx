@@ -1,5 +1,3 @@
-
-
 import { ArrowDown } from "lucide-react";
 import { Carrousel } from "./Carrousel";
 import { Button } from "./ui/button";

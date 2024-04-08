@@ -11,7 +11,7 @@ export default function Page() {
   return (
       <div>
 
-          <H1>Explorer les blockchain</H1>
+          <H1 subtitle={'Ne loupez rien on chain.'}>Explorer les blockchain</H1>
           <ToolGrid toolIds={suivi}/>
 
   

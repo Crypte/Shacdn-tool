@@ -34,7 +34,7 @@ export const NAV_BAR = [
         label: 'Crypto',
         key: 'Crypto',
         submenu: [
-            { label: 'Wallet', icon: Wallet, href:'/crypto/wallet',title: "Portefeuilles de confiance", subtitle: "Your keys, your coins."  },
+            { label: 'Wallet', icon: Wallet, href:'/crypto/wallet'},
             { label: 'Échanges Crypto', icon: Coins, href:'/crypto/exchanges',title: "Plateformes d'échange fiables", subtitle: "Pour vos achats."  },
             { label: 'Explorateur', icon: PackageCheck, href:'/crypto/explorer',title: "Explorateurs", subtitle: "Ne loupez rien on chain."  }
         ]

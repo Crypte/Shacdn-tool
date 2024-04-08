@@ -10,7 +10,7 @@ export default function Page() {
   
   return (
     <div>
-          <H1>Messagerie</H1>
+          <H1 subtitle={'Gardez vos conversations privées.'}>Messagerie</H1>
           <P>Communiquez en toute confidentialité avec des applications de messagerie instantanée conçues pour protéger votre vie privée. Protégez vos échanges avec un cryptage de bout en bout et soyez assuré que vos conversations restent confidentielles. Gardez le contrôle de vos données et profitez d'une messagerie sécurisée pour une tranquillité d'esprit totale.</P>
           <InfoBox variant="information">Nous savons que ces services sont rarement utilisés, c'est pourquoi vous devriez vous en tenir aux plus populaires. Les télécharger et les suggérer à vos amis et votre famille est la première étape vers ce changement.</InfoBox>
           <ToolGrid toolIds={Messagerie}/>

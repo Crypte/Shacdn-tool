@@ -14,7 +14,7 @@ export default function Page() {
 
   return (
       <div>
-          <H1>Crypto Wallet</H1>
+          <H1 subtitle={'Your keys, your coins.'}>Crypto Wallet</H1>
           <P>A crypto wallet is a digital tool that securely stores and manages your cryptocurrencies, such as Bitcoin and Ethereum, acting as your virtual wallet for digital assets. It allows you to send, receive, and store various cryptocurrencies while giving you control over your own funds and financial autonomy.</P>
 
           <InfoBox variant="warning">La gestion d'un portefeuille nécessite de comprendre les concepts de Seed, de clé publique et de clé privée. Vous êtes votre propre banquier. Si vous n'êtes pas sûr de vous, utilisez un portefeuille pour conserver vos cryptomonnaies.</InfoBox>

@@ -41,7 +41,7 @@ export const InfoBox = ({ children, variant,title }:InfoBoxProps) => {
         </div>
         <div className="ml-4">
         {title && <p className="font-extrabold mb-2">{title}</p>}
-        <p className=" text-sm leading-6">{children}</p>
+        <p className=" text-base">{children}</p>
         </div>
       </div>
     </div>

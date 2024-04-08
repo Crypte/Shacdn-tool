@@ -7,7 +7,7 @@ interface PProps {
 
 export const P = ({ className, children} :PProps) => {
   return (
-    <p className={`leading-7 [&:not(:first-child)]:mt-6 text-muted-foreground ${className}`}>
+    <p className={`lg:leading-7 text-base [&:not(:first-child)]:mt-6 text-muted-foreground ${className}`}>
       {children}
     </p>
   );

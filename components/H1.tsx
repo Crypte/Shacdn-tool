@@ -9,12 +9,10 @@ interface H1Props {
 export const H1 = ({ className,children,subtitle }: H1Props) => {
   return (
     <div className="my-4 scroll-m-20">
-    <h1 className={`mb-2 w-fit text-4xl font-bold tracking-tight lg:text-5xl ${className}`}>
+    <h1 className={`mb-2 w-fit text-4xl font-bold tracking-tight lg:text-5xl pb-2 border-b-2 border-primary/50 ${className}`}>
       {children}
     </h1>
-    <h2 className="text-md text-primary font-semibold tracking-tight lg:text-base">
-      {subtitle}
-    </h2>
+    
     </div>
   );
 };

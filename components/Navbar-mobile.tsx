@@ -64,9 +64,8 @@ export const Navbarmobile= () => {
             <div key={index} className="mb-3">
               <h2 className="mb-3 text-xl pb-2 border-b text-foreground font-bold">{link.label}</h2>
               {link.submenu.map((item,index) => (
-                <SheetClose asChild>
+                <SheetClose asChild key={index}>
                 <Link
-                  key={index}
                   href={item.href}
                 >
                   <label className="py-2 text-center cursor-pointer transition duration-300 ease-in-out flex items-center text-muted-foreground text-lg">

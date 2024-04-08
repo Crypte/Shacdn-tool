@@ -8,7 +8,7 @@ interface H1Props {
 
 export const H1 = ({ className,children,subtitle }: H1Props) => {
   return (
-    <div className="my-8 scroll-m-20">
+    <div className="my-4 scroll-m-20">
     <h1 className={`mb-2 w-fit text-4xl font-bold tracking-tight lg:text-5xl ${className}`}>
       {children}
     </h1>

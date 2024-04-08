@@ -30,7 +30,7 @@ const Toolcard = ({ id }: ToolcardProps) => {
           <div className="p-5 gap-5 flex flex-col">
             <div className="relative">
             <AspectRatio ratio={16 / 9}>
-              <Image placeholder = 'blur' blurDataURL="https://placehold.co/1920x1080" className="rounded-lg object-cover" src={Tool.url_img} alt="logo" fill loading="lazy"/>
+              <Image placeholder = 'blur' blurDataURL="https://placehold.co/1920x1080" className="rounded-lg object-cover" src={Tool.url_img} alt="logo" fill/>
               </AspectRatio>
               <div className="flex w-fit gap-1.5 flex-wrap absolute bottom-0 left-0 right-0 p-4">
                 {Tool.badge &&
@@ -53,7 +53,7 @@ const Toolcard = ({ id }: ToolcardProps) => {
               <div className="h-18 flex flex-col justify-between">
               <h1 className="transition group-hover:underline text-2xl font-bold flex gap-2 items-center">
                 {Tool.nom}
-                <ExternalLink  size={20} className="transition opacity-0 group-hover:opacity-100" />
+                <ExternalLink  size={20} className="transition lg:opacity-0 lg:group-hover:opacity-100" />
               </h1>
             
               {Tool.platform && (

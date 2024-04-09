@@ -5,8 +5,14 @@ import { ChevronDown } from "lucide-react";
 import { BsTwitterX } from "react-icons/bs";
 import { ThemeSwitch } from "./Theme-switch";
 import { Button } from "./ui/button";
+import { LocaleSwitcher } from "./Locale-switcher";
+import { i18n, Locale } from "../i18n-config";
 
-export const Navbar = () => {
+interface LocaleNavbarProps {
+  lang: Locale;
+}
+
+export function Navbar({ lang }: LocaleNavbarProps) {
 
   return (
     <div className="fixed w-full py-2 xl:block hidden border-b border-foreground/10 backdrop-blur-xl bg-background/40">
@@ -23,7 +29,7 @@ export const Navbar = () => {
               <div className="top-full group-hover:pointer-events-auto pointer-events-none absolute pt-7 transition opacity-0 group-hover:opacity-100 duration-200">
                 <div className="rounded-2xl scale-95 group-hover:scale-100 flex flex-col w-fit shadow shadow-foreground/30 p-3 transition duration-200 bg-background">
                   {item.submenu.map((item2,index) => (
-                    <Link key={index} href={item2.href} className="p-2 whitespace-nowrap hover:bg-foreground/5 rounded-md flex items-center gap-4">
+                    <Link key={index} href={`/${lang}${item2.href}`} className="p-2 whitespace-nowrap hover:bg-foreground/5 rounded-md flex items-center gap-4">
                       <span className="p-1.5 bg-foreground/10 rounded-lg"><item2.icon size={25}/></span>
                       {item2.label}
                     </Link>
@@ -47,6 +53,7 @@ export const Navbar = () => {
             </Link>
         </Button>
         <ThemeSwitch/>
+        <LocaleSwitcher lang={lang}/>
         </div>
       </nav>
     </div>

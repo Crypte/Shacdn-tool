@@ -10,7 +10,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/components/ui/sheet"
+} from "../components/ui/sheet"
 
 import { ScrollArea } from "./ui/scroll-area";
 

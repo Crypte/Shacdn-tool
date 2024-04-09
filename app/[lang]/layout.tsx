@@ -1,9 +1,14 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "../styles/globals.css";
+import "../../styles/globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Navbarmobile } from "@/components/Navbar-mobile";
 import { ThemeProvider } from "@/components/Theme-provider";
+import { i18n, type Locale } from "../../i18n-config"
+
+export async function generateStaticParams() {
+  return i18n.locales.map((locale) => ({ lang: locale }));
+}
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,11 +19,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: { lang: Locale };
 }>) {
   return (
-    <html lang='fr' suppressHydrationWarning>
+    <html lang={params.lang} suppressHydrationWarning>
     <body id='body' className={inter.className}>
     <ThemeProvider
             attribute="class"
@@ -28,7 +35,7 @@ export default function RootLayout({
           >
       <div className='fixed top-0 z-50 '>
       <Navbarmobile/>
-      <Navbar />
+      <Navbar lang ={params.lang} />
         </div>
       <div className='container mt-28'>
       {children}

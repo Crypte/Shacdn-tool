@@ -1,3 +1,5 @@
+'use client'
+
 import Image from "next/image";
 import { TOOL_LIST } from "@/constants/tool_en";
 

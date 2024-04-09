@@ -27,7 +27,7 @@ const Toolcard = ({ id }: ToolcardProps) => {
     <Card>
     <div className="relative rounded-2xl mb-4 lg:m-0 group transition-all">
       <Link href={Tool.link} target="_blank">
-          <div className="p-4 gap-5 flex flex-col">
+          <div className="p-5 gap-5 flex flex-col">
             <div className="relative">
             <AspectRatio ratio={16 / 9}>
               <Image placeholder = 'blur' blurDataURL="https://placehold.co/1920x1080" className="rounded-lg object-cover" src={Tool.url_img} alt="logo" fill/>

@@ -5,6 +5,9 @@
     "counter": {
       "increment": "Zuwachs",
       "decrement": "Dekrementieren"
+    },
+    "herosection": {
+      "bigslogan": "Reprenez le contrôle",
+      "littleslogan": "Sécurité. Productivité. Efficacité. "
     }
-
   }

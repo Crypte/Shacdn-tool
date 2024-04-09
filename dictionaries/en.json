@@ -5,5 +5,10 @@
     "counter": {
       "increment": "Zuwachs",
       "decrement": "Dekrementieren"
+    },
+
+    "herosection": {
+      "bigslogan": "Regain control",
+      "littleslogan": "Safety. Productivity. Efficiency."
     }
   }

@@ -1,9 +1,14 @@
 import { Herosection } from "@/components/Herosection";
+import { Locale } from "@/i18n-config";
 
-export default function Home() {
+export default async function Home({
+  params: { lang },
+}: {
+  params: { lang: Locale };
+}) {
   return (
     <div>
-      <Herosection/>
+      <Herosection lang={lang}/>
     </div>
   );
 }

@@ -1,14 +1,145 @@
 {
-    "server-component": {
+    "servercomponent": {
       "welcome": "Willkommen"
-    },
-    "counter": {
-      "increment": "Zuwachs",
-      "decrement": "Dekrementieren"
     },
 
     "herosection": {
       "bigslogan": "Regain control",
       "littleslogan": "Safety. Productivity. Efficiency."
-    }
+    }, 
+  
+    "NAV_BAR": [
+      {
+        "label": "Web Navigation", 
+        "key": "Communication",
+        "submenu": [
+          {
+            "label": "Browser",
+            "icon": "Compass",
+            "href": "/navigation-web/navigateur"
+          },
+          {
+            "label": "Search Engine",
+            "icon": "Search",
+            "href": "/navigation-web/moteur-recherche"
+          },
+          {
+            "label": "Ad Blocker",
+            "icon": "ShieldX",
+            "href": "/navigation-web/ad-blocker"
+          },
+          {
+            "label": "VPN",
+            "icon": "EyeOff",
+            "href": "/navigation-web/vpn"
+          }
+        ]
+      },
+      {
+        "label": "Communication",
+        "key": "Communication",
+        "submenu": [
+          {
+            "label": "Email",
+            "icon": "Mail",
+            "href": "/communication/email"
+          },
+          {
+            "label": "Messaging",
+            "icon": "MessageCircle",
+            "href": "/communication/messagerie"
+          }
+        ]
+      },
+      {
+        "label": "Security",
+        "key": "Sécurité",
+        "submenu": [
+          {
+            "label": "Passwords",
+            "icon": "FormInput",
+            "href": "/securite/gestionnaire-mdp"
+          },
+          {
+            "label": "Two-factor Authentication",
+            "icon": "CheckCheck",
+            "href": "/securite/2FA"
+          },
+          {
+            "label": "Antivirus",
+            "icon": "ShieldCheck",
+            "href": "/securite/antivirus"
+          },
+          {
+            "label": "Hardware",
+            "icon": "CircuitBoard",
+            "href": "/securite/materiel"
+          }
+        ]
+      },
+      {
+        "label": "Crypto",
+        "key": "Crypto",
+        "submenu": [
+          {
+            "label": "Wallet",
+            "icon": "Wallet",
+            "href": "/crypto/wallet"
+          },
+          {
+            "label": "Crypto Exchanges",
+            "icon": "Coins",
+            "href": "/crypto/exchanges"
+          },
+          {
+            "label": "Explorer",
+            "icon": "PackageCheck",
+            "href": "/crypto/explorer"
+          }
+        ]
+      },
+      {
+        "label": "Storage & Files",
+        "key": "Stockage et Fichiers",
+        "submenu": [
+          {
+            "label": "Cloud",
+            "icon": "UploadCloud",
+            "href": "/stockage-fichiers/cloud"
+          },
+          {
+            "label": "Encryption",
+            "icon": "FileKey",
+            "href": "/stockage-fichiers/chiffrement"
+          },
+          {
+            "label": "Cleaning & Optimization",
+            "icon": "Eraser",
+            "href": "/stockage-fichiers/nettoyage"
+          }
+        ]
+      },
+      {
+        "label": "Productivity",
+        "key": "Productivité",
+        "submenu": [
+          {
+            "label": "Note Taking",
+            "icon": "StickyNote",
+            "href": "/productivite/notes"
+          },
+          {
+            "label": "Collaboration",
+            "icon": "Users",
+            "href": "/productivite/collaboration"
+          },
+          {
+            "label": "AI Tools",
+            "icon": "BrainCircuit",
+            "href": "/productivite/IA"
+          }
+        ]
+      }
+    ]
+    
   }

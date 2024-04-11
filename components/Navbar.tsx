@@ -8,7 +8,30 @@ import { Button } from "./ui/button";
 import { LocaleSwitcher } from "./Locale-switcher";
 import { i18n, Locale } from "../i18n-config";
 import { getDictionary } from "../get-dictionary";
+import { ReactElement } from "react";
+import {EyeOff,Compass, Search, ShieldX, Mail, MessageCircle, FormInput, CheckCheck, ShieldCheck, CircuitBoard, Wallet, Coins, PackageCheck, UploadCloud, FileKey, Eraser, BrainCircuit, StickyNote, Users } from "lucide-react";
 
+const iconComponents= {
+  Compass: <Compass />,
+  Search: <Search />,
+  ShieldX: <ShieldX />,
+  Mail: <Mail />,
+  MessageCircle: <MessageCircle />,
+  FormInput: <FormInput />,
+  CheckCheck: <CheckCheck />,
+  ShieldCheck: <ShieldCheck />,
+  CircuitBoard: <CircuitBoard />,
+  Wallet: <Wallet />,
+  Coins: <Coins />,
+  PackageCheck: <PackageCheck />,
+  UploadCloud: <UploadCloud />,
+  FileKey: <FileKey />,
+  Eraser: <Eraser />,
+  BrainCircuit: <BrainCircuit />,
+  StickyNote: <StickyNote />,
+  Users: <Users />,
+  EyeOff : <EyeOff/>
+};
 
 interface LocaleNavbarProps {
   lang: Locale;
@@ -26,7 +49,7 @@ export async function Navbar({ lang }: LocaleNavbarProps) {
           <Image className="rounded-md dark:hidden" src={'/logo_app/logowhite.png'} width={39} height={39} alt="logo" />
         </Link>
         <ul className="gap-1 flex">
-          {NAV_BAR.map((item,index) => (
+          {dictionary.NAV_BAR.map((item,index) => (
             <li key={index} className='group p-1.5 rounded-lg flex gap-1.5 relative items-center cursor-default '>
               <span className="transition text-muted-foreground group-hover:text-primary">{item.label}</span>
               <ChevronDown size={20} className="group-hover:rotate-180 transition text-muted-foreground group-hover:text-primary"/>
@@ -34,7 +57,7 @@ export async function Navbar({ lang }: LocaleNavbarProps) {
                 <div className="rounded-2xl scale-95 group-hover:scale-100 flex flex-col w-fit shadow shadow-foreground/30 p-3 transition duration-200 bg-background">
                   {item.submenu.map((item2,index) => (
                     <Link key={index} href={`/${lang}${item2.href}`} className="p-2 whitespace-nowrap hover:bg-foreground/5 rounded-md flex items-center gap-4">
-                      <span className="p-1.5 bg-foreground/10 rounded-lg"><item2.icon size={25}/></span>
+                      <span className="p-1.5 bg-foreground/10 rounded-lg">{iconComponents[item2.icon as keyof typeof iconComponents]}</span>
                       {item2.label}
                     </Link>
                   ))}

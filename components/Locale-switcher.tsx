@@ -36,7 +36,7 @@ export function LocaleSwitcher({ lang }: LocaleSwitcherProps) {
   };
 
   return (
-    <Button variant={'outline'} className="text-2xl" asChild>
+    <Button variant={'outline'} className="text-xl" size={"icon"} asChild>
       <Link href={redirectedPathName(oppositeLocale)}>{currentIcon}</Link>
     </Button>
   );

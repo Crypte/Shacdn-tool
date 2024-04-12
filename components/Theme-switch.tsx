@@ -16,8 +16,8 @@ export function ThemeSwitch() {
 
   return (
     <Button variant="outline" size="icon" onClick={handleClick}>
-        <Sun className="h-[1.2rem] w-[1.2rem] dark:opacity-100 opacity-0 hidden dark:block transition-opacity" />
-        <MoonStar className="h-[1.2rem] w-[1.2rem] opacity-100 dark:opacity-0 rotate-0 dark:rotate-90 dark:hidden block" />
+        <Sun className="h-[1.2rem] w-[1.2rem] opacity-100 dark:opacity-0 dark:hidden block transition-opacity" />
+        <MoonStar className="h-[1.2rem] w-[1.2rem] dark:opacity-100 opacity-0 dark:rotate-0 rotate-90 hidden dark:block" />
     </Button>
   )
 }

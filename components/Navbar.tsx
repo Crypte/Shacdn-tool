@@ -1,4 +1,3 @@
-import { NAV_BAR } from "@/constants";
 import Link from "next/link";
 import Image from "next/image";
 import { ChevronDown } from "lucide-react";
@@ -56,7 +55,7 @@ export async function Navbar({ lang }: LocaleNavbarProps) {
               <div className="top-full group-hover:pointer-events-auto pointer-events-none absolute pt-7 transition opacity-0 group-hover:opacity-100 duration-200">
                 <div className="rounded-2xl scale-95 group-hover:scale-100 flex flex-col w-fit shadow shadow-foreground/30 p-3 transition duration-200 bg-background">
                   {item.submenu.map((item2,index) => (
-                    <Link key={index} href={`/${lang}${item2.href}`} className="p-2 whitespace-nowrap hover:bg-foreground/5 rounded-md flex items-center gap-4">
+                    <Link key={index} href={`/${lang}${item2.href}`} className="p-2 whitespace-nowrap hover:bg-foreground/10 rounded-md flex items-center gap-4">
                       <span className="p-1.5 bg-foreground/10 rounded-lg">{iconComponents[item2.icon as keyof typeof iconComponents]}</span>
                       {item2.label}
                     </Link>

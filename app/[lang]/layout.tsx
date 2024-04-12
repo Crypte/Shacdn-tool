@@ -34,7 +34,7 @@ export default function RootLayout({
             disableTransitionOnChange
           >
       <div className='fixed top-0 z-50 '>
-      <Navbarmobile/>
+      <Navbarmobile lang ={params.lang}/>
       <Navbar lang ={params.lang} />
         </div>
       <div className='container mt-28'>

@@ -1,5 +1,9 @@
 import { ThemeSwitch } from "./Theme-switch";
 import { BsTwitterX } from "react-icons/bs";
+import { i18n, Locale } from "../i18n-config";
+import { getDictionary } from "../get-dictionary";
+import {EyeOff,Compass, Search, ShieldX, Mail, MessageCircle, FormInput, CheckCheck, ShieldCheck, CircuitBoard, Wallet, Coins, PackageCheck, UploadCloud, FileKey, Eraser, BrainCircuit, StickyNote, Users } from "lucide-react";
+
 
 import {
   Sheet,
@@ -13,14 +17,39 @@ import {
 } from "../components/ui/sheet"
 
 import { ScrollArea } from "./ui/scroll-area";
-
-import { NAV_BAR } from "@/constants";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "./ui/button";
 import { Menu } from "lucide-react";
+
+interface LocaleNavbarmobileProps {
+  lang: Locale;
+}
+const iconComponents= {
+  Compass: <Compass />,
+  Search: <Search />,
+  ShieldX: <ShieldX />,
+  Mail: <Mail />,
+  MessageCircle: <MessageCircle />,
+  FormInput: <FormInput />,
+  CheckCheck: <CheckCheck />,
+  ShieldCheck: <ShieldCheck />,
+  CircuitBoard: <CircuitBoard />,
+  Wallet: <Wallet />,
+  Coins: <Coins />,
+  PackageCheck: <PackageCheck />,
+  UploadCloud: <UploadCloud />,
+  FileKey: <FileKey />,
+  Eraser: <Eraser />,
+  BrainCircuit: <BrainCircuit />,
+  StickyNote: <StickyNote />,
+  Users: <Users />,
+  EyeOff : <EyeOff/>
+};
+
  
-export const Navbarmobile= () => {
+export async function Navbarmobile({ lang }: LocaleNavbarmobileProps) {
+  const dictionary = await getDictionary(lang);
   return (
     <div className="xl:hidden block">
     <Sheet>
@@ -60,17 +89,17 @@ export const Navbarmobile= () => {
       <SheetTitle>Menu</SheetTitle>
       
         <ScrollArea className="h-full my-6 pb-10">
-      {NAV_BAR.map((link,index) => (
+        {dictionary.NAV_BAR.map((item,index) => (
             <div key={index} className="mb-3">
-              <h2 className="mb-3 text-xl pb-2 border-b text-foreground font-bold">{link.label}</h2>
-              {link.submenu.map((item,index) => (
+              <h2 className="mb-3 text-xl pb-2 border-b text-foreground font-bold">{item.label}</h2>
+              {item.submenu.map((item,index) => (
                 <SheetClose asChild key={index}>
                 <Link
                   href={item.href}
                 >
                   <label className="py-2 text-center cursor-pointer transition duration-300 ease-in-out flex items-center text-muted-foreground text-lg">
                     <div className="flex items-center gap-2">
-                    <span className="p-1.5"><item.icon size={20}/></span>
+                    <span className="p-1.5">{iconComponents[item.icon as keyof typeof iconComponents]}</span>
                       <span>{item.label}</span>
                     </div>
                   </label>

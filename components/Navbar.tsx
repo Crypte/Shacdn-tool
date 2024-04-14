@@ -8,6 +8,8 @@ import { LocaleSwitcher } from "./Locale-switcher";
 import { i18n, Locale } from "../i18n-config";
 import { getDictionary } from "../get-dictionary";
 import { ReactElement } from "react";
+import { Siteconfig } from "@/config/site";
+
 import {EyeOff,Compass, Search, ShieldX, Mail, MessageCircle, FormInput, CheckCheck, ShieldCheck, CircuitBoard, Wallet, Coins, PackageCheck, UploadCloud, FileKey, Eraser, BrainCircuit, StickyNote, Users } from "lucide-react";
 
 const iconComponents= {
@@ -68,7 +70,7 @@ export async function Navbar({ lang }: LocaleNavbarProps) {
 
         <div className="flex items-center gap-3 h-full">
         <Button variant={'outline'} size={'icon'} asChild>
-          <Link href="/bon-plan" target="blank">
+          <Link href={Siteconfig.links.twitter} target="blank">
             <BsTwitterX className="h-[1.2rem] w-[1.2rem]" />
           </Link>
           </Button>

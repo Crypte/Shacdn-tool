@@ -5,6 +5,7 @@ import { Navbar } from "@/components/Navbar";
 import { Navbarmobile } from "@/components/Navbar-mobile";
 import { ThemeProvider } from "@/components/Theme-provider";
 import { i18n, type Locale } from "../../i18n-config"
+import { Siteconfig } from "@/config/site";
 
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }));

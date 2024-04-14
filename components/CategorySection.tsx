@@ -5,11 +5,18 @@ import {
     TrophyIcon,
     UsersIcon,
     ZapIcon,
+    GlobeLock,
   } from "lucide-react";
 import { H1 } from "./H1";
+import { Locale } from "@/i18n-config";
+import { getDictionary } from "@/get-dictionary";
 
+interface LocaleCategorySection {
+  lang:Locale
+}
   
-  export function CategorySection() {
+  export async function CategorySection({lang}:LocaleCategorySection) {
+    const dictionary = getDictionary(lang) 
     return (
       <>
         {/* Icon Blocks */}
@@ -20,7 +27,7 @@ import { H1 } from "./H1";
               <div className="space-y-6 lg:space-y-10">
                 {/* Icon Block */}
                 <div className="flex">
-                  <BrainCogIcon className="flex-shrink-0 mt-2 h-8 w-8" />
+                  <GlobeLock className="flex-shrink-0 mt-2 h-8 w-8" />
                   <div className="ms-5 sm:ms-8">
                     <h3 className="text-base sm:text-lg font-semibold">
                       Creative minds

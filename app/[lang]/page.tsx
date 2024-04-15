@@ -12,7 +12,7 @@ export default async function Home({
   return (
     <div>
       <Herosection lang={lang}/>
-      <CategorySection/>
+      <CategorySection lang={lang}/>
       <Carrousel/>
     
     </div>

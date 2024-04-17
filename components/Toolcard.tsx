@@ -9,34 +9,19 @@ import { Suspense } from "react";
 import { AspectRatio } from "./ui/aspect-ratio";
 import { Card } from "./ui/card";
 import { Skeleton } from "./ui/skeleton";
+import { TOOL_LIST } from "@/constants/tool_en";
 
 
 type ToolcardProps = {
   id: number;
 };
 
-interface Tool {
-  id: number;
-  nom: string;
-  url: string;
-  badge: string[];
-  description: string;
-  url_logo: string;
-  url_img: string;
-  platform: string[];
-  link: string;
-}
+const Toolcard = ({ id }: ToolcardProps) => {
+  const Tool = TOOL_LIST.find((item) => item.id === id);
 
-async function GetTools() {
-  const res = await fetch('https://shacdn-tool-git-i18n-feature-gitcryptes-projects.vercel.app/api/tools');
-  const data = await res.json();
-  return data.TOOL_LIST;
-}
-
-async function Toolcard({ id }: ToolcardProps) {
-  const toolist = await GetTools();
-  const Tool = toolist.find((item: Tool) => item.id === id);
-  
+  if (!Tool) {
+    return <div>Tool introuvable pour l'ID {id}</div>;
+  }
   return (
     <Suspense fallback={<SkeletonCard/>}>
     <Card>

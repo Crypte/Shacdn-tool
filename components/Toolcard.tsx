@@ -16,14 +16,14 @@ type ToolcardProps = {
   id: number;
 };
 
-async function Toolcard({ id }: ToolcardProps) {
-  async function getToolData() {
-    const res = await fetch(`${BASE_API_URL}/api/tools/${id}`);
-    const data = await res.json();
-    return data.tool;
-  }
+async function getToolData(id: number) { // add id parameter here
+  const res = await fetch(`${BASE_API_URL}/api/tools/${id}`);
+  const data = await res.json();
+  return data.tool;
+}
 
-  const toolData = await getToolData();
+async function Toolcard({ id }: ToolcardProps) {
+  const toolData = await getToolData(id);
 
   if (!toolData) {
     return <div>Error loading tool data</div>;

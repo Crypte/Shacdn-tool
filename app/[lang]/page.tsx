@@ -10,9 +10,6 @@ export default async function Home({
 }: {
   params: { lang: Locale };
 }) {
-  if (!BASE_API_URL){
-    return null;
-  }
   return (
     <div className="lg:space-y-36 space-y-28 ">
       <Herosection lang={lang}/>

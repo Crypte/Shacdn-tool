@@ -28,7 +28,7 @@ interface Tool {
 }
 
 async function GetTools() {
-  const res = await fetch('/api/tools');
+  const res = await fetch('https://shacdn-tool-git-i18n-feature-gitcryptes-projects.vercel.app/api/tools');
   const data = await res.json();
   return data.TOOL_LIST;
 }

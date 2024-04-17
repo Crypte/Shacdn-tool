@@ -17,7 +17,7 @@ type ToolcardProps = {
 };
 
 async function getToolData(id:number) {
-  const res = await fetch(process.env.VERCEL_URL+`/api/tools/"${id}`);
+  const res = await fetch(`${BASE_API_URL}/api/tools/${id}`);
   try {
     const data = await res.json();
     return data.tool;

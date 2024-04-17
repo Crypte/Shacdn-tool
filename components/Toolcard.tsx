@@ -10,17 +10,6 @@ import { AspectRatio } from "./ui/aspect-ratio";
 import { Card } from "./ui/card";
 import { Skeleton } from "./ui/skeleton";
 
-type Tool = {
-  id: number;
-  nom: string;
-  url_img: string;
-  url_logo: string;
-  description: string;
-  link:string;
-  badge?: string[];
-  platform?: string[];
-  offer?: string;
-};
 
 type ToolcardProps = {
   id: number;
@@ -28,13 +17,12 @@ type ToolcardProps = {
 
 async function Toolcard({ id }: ToolcardProps) {
   async function getToolData() {
-    const res = await fetch(`https://shacdn-tool-git-i18n-feature-gitcryptes-projects.vercel.app/api/tools/${id}`);
+    const res = await fetch(`${process.env.API_URL}/tools/${id}`);
     const data = await res.json();
-    console.log(data.tool);
     return data.tool;
   }
 
-  const toolData:Tool = await getToolData();
+  const toolData = await getToolData();
 
   if (!toolData) {
     return <div>Error loading tool data</div>;
@@ -43,7 +31,7 @@ async function Toolcard({ id }: ToolcardProps) {
     <Suspense fallback={<SkeletonCard/>}>
     <Card>
     <div className="relative rounded-2xl mb-4 lg:m-0 group transition-all">
-    {toolData.link && ( // add a conditional check for the link property
+    {toolData.link && (
       <Link href={toolData.link} target="_blank">
           <div className="p-5 gap-5 flex flex-col">
             <div className="relative">
@@ -96,7 +84,7 @@ async function Toolcard({ id }: ToolcardProps) {
             )}
           </div>
       </Link>
-       )}
+ )}
     </div>
     </Card>
     </Suspense>

@@ -9,7 +9,7 @@ export const TOOL_LIST = [
         url_logo: "/logo_tools/proton.png",
         url_img:"/img_tools/protonfull.png",
         platform:["Mac","Ios","Android","Windows","Linux","Browser"],
-        link:"https://pr.tn/ref/GE6SVZ71VBHG",
+        link:"https://pr.tn/ref/GE6SVZ71VBHG"
     },
     {
         id : 2,
@@ -19,7 +19,7 @@ export const TOOL_LIST = [
         url_logo: "/logo_tools/startmail.jpg",
         url_img:"/img_tools/startmailfull.png",
         platform:["Browser"],
-        link:"https://www.startmail.com/en/",
+        link:"https://www.startmail.com/en/"
     },
     {   
         id : 3,
@@ -29,13 +29,13 @@ export const TOOL_LIST = [
         description: "Un navigateur web open source, construit sur la base de Firefox, mettant l'accent sur la vie privée et la liberté des utilisateurs. Il bloque automatiquement les traceurs, les scripts et les publicités par défaut pour protéger les informations de l'utilisateur.",
         url_logo: "/logo_tools/libre-wolf.png",
         url_img: "/img_tools/librewolffull.png",
-        link:"https://librewolf.net/",
+        link:"https://librewolf.net/"
     }, 
     {
         id: 4,
         nom: "Tor Browser",
         url: "tor-browser",
-        badge:["Opensource", "Anonymous","Basedonfirefox"],
+        badge:["Opensource", "Anonymous","Basedonfirefox" ],
         description: "Un navigateur web open source basé sur Firefox qui garantit l'anonymat et la confidentialité de l'utilisateur en chiffrant et en routant les données via les nœuds Tor, tout en bloquant les scripts et les traceurs.",
         url_logo: "/logo_tools/tor.png",
         url_img: "/img_tools/torfull.png",
@@ -59,7 +59,7 @@ export const TOOL_LIST = [
         description: "Un navigateur web mobile axé sur la confidentialité a été développé, mettant l'accent sur le blocage par défaut des traceurs et des publicités, ainsi que sur la suppression de l'historique de navigation à la sortie. Son interface minimaliste offre une expérience de navigation simplifiée",
         url_logo: "/logo_tools/firefox-focus.jpeg",
         url_img: "/img_tools/bravefull.png",
-        link: "https://www.mozilla.org/en-US/firefox/browsers/mobile/focus/",
+        link: "https://www.mozilla.org/en-US/firefox/browsers/mobile/focus/"
       },
       {
         id: 7,

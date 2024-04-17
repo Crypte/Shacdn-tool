@@ -5,8 +5,8 @@ import { H2 } from "@/components/H2";
 
 export default function Page() {
 
-  const NavigateurBureau = [3, 5, 4, 35, 77];
-  const NavigateurMobile = [6];
+  const NavigateurBureau = [20];
+  const NavigateurMobile = [45];
 
   return (
     <div>

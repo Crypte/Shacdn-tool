@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { TOOL_LIST } from "@/constants/tool_en";
 import Link from "next/link";
 import { Badge } from "./Badge";
 import { Platform } from "./Platform";
@@ -12,18 +11,32 @@ import { Card } from "./ui/card";
 import { Skeleton } from "./ui/skeleton";
 
 
-
 type ToolcardProps = {
   id: number;
 };
 
-async function Toolcard ({ id }: ToolcardProps) {
-  const Tool = TOOL_LIST.find((item) => item.id === id);
+interface Tool {
+  id: number;
+  nom: string;
+  url: string;
+  badge: string[];
+  description: string;
+  url_logo: string;
+  url_img: string;
+  platform: string[];
+  link: string;
+}
 
-  if (!Tool) {
-    return <div>Tool introuvable pour l'ID {id}</div>;
-  }
+async function GetTools() {
+  const res = await fetch('http://localhost:3000/api/tools');
+  const data = await res.json();
+  return data.TOOL_LIST;
+}
 
+async function Toolcard({ id }: ToolcardProps) {
+  const toolist = await GetTools();
+  const Tool = toolist.find((item: Tool) => item.id === id);
+  
   return (
     <Suspense fallback={<SkeletonCard/>}>
     <Card>
@@ -36,7 +49,7 @@ async function Toolcard ({ id }: ToolcardProps) {
               </AspectRatio>
               <div className="flex w-fit gap-1.5 flex-wrap absolute bottom-0 left-0 right-0 p-4">
                 {Tool.badge &&
-                  Tool.badge.map((badge,index) => (
+                  Tool.badge.map((badge:any,index:any) => (
                     <Badge variant={badge} key={index} />
                   ))}
               </div>
@@ -60,7 +73,7 @@ async function Toolcard ({ id }: ToolcardProps) {
             
               {Tool.platform && (
               <div className="pointer-events-none font-bold p-1 text-main flex gap-3 items-center border-2 rounded-full w-fit ">
-                {Tool.platform.map((platform, index) => (
+                {Tool.platform.map((platform:any, index:any) => (
                   <Platform variant={platform} key={index} />
                 ))}
               </div>

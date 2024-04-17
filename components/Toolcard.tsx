@@ -27,13 +27,8 @@ interface Tool {
   link: string;
 }
 
-const dev = process.env.NODE_ENV !== "production";
-const server = dev
-? "http://localhost:3000"
-: "https://shacdn-tool-git-i18n-feature-gitcryptes-projects.vercel.app";
-
 async function GetTools() {
-  const res = await fetch(`${server}/api/tools`);
+  const res = await fetch('http://localhost:3000/api/tools');
   const data = await res.json();
   return data.TOOL_LIST;
 }

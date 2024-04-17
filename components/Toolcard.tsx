@@ -16,13 +16,20 @@ type ToolcardProps = {
   id: number;
 };
 
-async function getToolData(id: number) { // add id parameter here
+async function getToolData(id:number) {
   const res = await fetch(`${BASE_API_URL}/api/tools/${id}`);
-  const data = await res.json();
-  return data.tool;
+  try {
+    const data = await res.json();
+    return data.tool;
+  } catch (error) {
+    console.error(error);
+    return null;
+  }
 }
 
 async function Toolcard({ id }: ToolcardProps) {
+
+
   const toolData = await getToolData(id);
 
   if (!toolData) {

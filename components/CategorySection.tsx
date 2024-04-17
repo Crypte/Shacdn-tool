@@ -1,124 +1,71 @@
+import React from "react";
+import { Badge } from "./ui/badge";
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "./ui/card";
+
+
+
+// Assuming these imports are available
 import {
-    BrainCogIcon,
-    PackageIcon,
-    ThumbsUpIcon,
-    TrophyIcon,
-    UsersIcon,
-    ZapIcon,
-    GlobeLock,
-  } from "lucide-react";
+  BrainCogIcon,
+  PackageIcon,
+  ThumbsUpIcon,
+  TrophyIcon,
+  UsersIcon,
+  ZapIcon,
+  GlobeLock,
+} from "lucide-react";
 import { H1 } from "./H1";
 import { Locale } from "@/i18n-config";
 import { getDictionary } from "@/get-dictionary";
 
 interface LocaleCategorySection {
-  lang:Locale
+  lang: Locale;
 }
-  
-  export async function CategorySection({lang}:LocaleCategorySection) {
-    const dictionary = getDictionary(lang) 
-    return (
-      <>
-        {/* Icon Blocks */}
-        <div className="container py-24 lg:py-32">
-          <div className="max-w-4xl mx-auto">
-            {/* Grid */}
-            <div className="grid md:grid-cols-2 gap-6 lg:gap-12">
-              <div className="space-y-6 lg:space-y-10">
-                {/* Icon Block */}
-                <div className="flex">
-                  <GlobeLock className="flex-shrink-0 mt-2 h-8 w-8" />
-                  <div className="ms-5 sm:ms-8">
-                    <h3 className="text-base sm:text-lg font-semibold">
-                      Creative minds
-                    </h3>
-                    <p className="mt-1 text-muted-foreground">
-                      We choose our teams carefully. Our people are the secret to
-                      great work.
-                    </p>
+
+export async function CategorySection({ lang }: LocaleCategorySection) {
+  const dictionary = await getDictionary(lang);
+
+  return (
+    <div className="container">
+      
+      
+          <div className="grid md:grid-cols-2 grid-cols-1 lg:gap-6 gap-4">
+              {dictionary.NAV_BAR.map((item, index) => (
+                <Card key={index}>
+               <CardHeader className="pb-4 flex-row items-center gap-4">
+               <div className="inline-flex justify-center items-center w-[50px] h-[50px] rounded-full border-2 bg-foreground">
+                  {renderIconByKey(item.icon)}
                   </div>
-                </div>
-                {/* End Icon Block */}
-                {/* Icon Block */}
-                <div className="flex">
-                  <PackageIcon className="flex-shrink-0 mt-2 h-8 w-8" />
-                  <div className="ms-5 sm:ms-8">
-                    <h3 className="text-base sm:text-lg font-semibold">
-                      Effortless updates
-                    </h3>
-                    <p className="mt-1 text-muted-foreground">
-                      Benefit from automatic updates to all boards any time you
-                      need to make a change to your website.
-                    </p>
-                  </div>
-                </div>
-                {/* End Icon Block */}
-                {/* Icon Block */}
-                <div className="flex">
-                  <ZapIcon className="flex-shrink-0 mt-2 h-8 w-8" />
-                  <div className="ms-5 sm:ms-8">
-                    <h3 className="text-base sm:text-lg font-semibold">
-                      Strong empathy
-                    </h3>
-                    <p className="mt-1 text-muted-foreground">
-                      We&apos;ve user tested our own process by shipping over 1k
-                      products for clients.
-                    </p>
-                  </div>
-                </div>
-                {/* End Icon Block */}
-              </div>
-              {/* End Col */}
-              <div className="space-y-6 lg:space-y-10">
-                {/* Icon Block */}
-                <div className="flex">
-                  <TrophyIcon className="flex-shrink-0 mt-2 h-8 w-8" />
-                  <div className="ms-5 sm:ms-8">
-                    <h3 className="text-base sm:text-lg font-semibold">
-                      Conquer the best
-                    </h3>
-                    <p className="mt-1 text-muted-foreground">
-                      We stay lean and help your product do one thing well.
-                    </p>
-                  </div>
-                </div>
-                {/* End Icon Block */}
-                {/* Icon Block */}
-                <div className="flex">
-                  <UsersIcon className="flex-shrink-0 mt-2 h-8 w-8" />
-                  <div className="ms-5 sm:ms-8">
-                    <h3 className="text-base sm:text-lg font-semibold">
-                      Designing for people
-                    </h3>
-                    <p className="mt-1 text-muted-foreground">
-                      We actively pursue the right balance between functionality
-                      and aesthetics, creating delightful experiences.
-                    </p>
-                  </div>
-                </div>
-                {/* End Icon Block */}
-                {/* Icon Block */}
-                <div className="flex">
-                  <ThumbsUpIcon className="flex-shrink-0 mt-2 h-8 w-8" />
-                  <div className="ms-5 sm:ms-8">
-                    <h3 className="text-base sm:text-lg font-semibold">
-                      Simple and affordable
-                    </h3>
-                    <p className="mt-1 text-muted-foreground">
-                      From boarding passes to movie tickets, there&apos;s pretty
-                      much nothing you can&apos;t do.
-                    </p>
-                  </div>
-                </div>
-                {/* End Icon Block */}
-              </div>
-              {/* End Col */}
+                  <CardTitle>{item.label}</CardTitle>
+                </CardHeader>
+                    <CardContent className="text-muted-foreground">
+                      The simplest way to keep your portfolio always up-to-date.
+                    </CardContent>
+                    </Card>
+              ))}
             </div>
-            {/* End Grid */}
-          </div>
-        </div>
-        {/* End Icon Blocks */}
-      </>
-    );
+      </div>
+  );
+}
+
+
+function renderIconByKey(iconName: string) {
+  switch (iconName) {
+    case "BrainCogIcon":
+      return <BrainCogIcon className="flex-shrink-0 mt-2 h-8 w-8" />;
+    case "PackageIcon":
+      return <PackageIcon className="flex-shrink-0 mt-2 h-8 w-8" />;
+    case "ThumbsUpIcon":
+      return <ThumbsUpIcon className="flex-shrink-0 mt-2 h-8 w-8" />;
+    case "TrophyIcon":
+      return <TrophyIcon className="flex-shrink-0 mt-2 h-8 w-8" />;
+    case "UsersIcon":
+      return <UsersIcon className="flex-shrink-0 mt-2 h-8 w-8" />;
+    case "ZapIcon":
+      return <ZapIcon className="flex-shrink-0 mt-2 h-8 w-8" />;
+    default:
+      return <GlobeLock className="flex-shrink-0 w-6 h-6 text-primary-foreground" />;
   }
+}
+
   

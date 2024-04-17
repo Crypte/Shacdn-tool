@@ -10,18 +10,17 @@ interface LocaleHerosectionProps {
 export async function Herosection({ lang }: LocaleHerosectionProps){
     const dictionary = await getDictionary(lang);
     return (
-        <div className="mt-44 relative">
+        <div className="relative py-20">
                     <div className="gradient-background red"></div>
                     <div className="gradient-background blue"></div>
                     <div className="gradient-background green"></div>
        
      
-          <div className="py-10">
+          <div>
             <div className="text-center mx-auto">
-              <h2 className="text-muted-foreground"> {dictionary.herosection.littleslogan}</h2>
             
               <div className="mt-5">
-                <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-7xl">
+                <h1 className="scroll-m-20 text-4xl font-bold tracking-tight lg:text-7xl">
                   {dictionary.herosection.bigslogan}
                 </h1>
               </div>

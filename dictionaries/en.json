@@ -12,6 +12,7 @@
       {
         "label": "Web Navigation", 
         "key": "Communication",
+        "icon" :"EarthLock",
         "submenu": [
           {
             "label": "Browser",
@@ -38,6 +39,7 @@
       {
         "label": "Communication",
         "key": "Communication",
+        "icon" :"MessagesSquare",
         "submenu": [
           {
             "label": "Email",
@@ -54,6 +56,7 @@
       {
         "label": "Security",
         "key": "Sécurité",
+        "icon" :"Fingerprint",
         "submenu": [
           {
             "label": "Passwords",
@@ -80,6 +83,7 @@
       {
         "label": "Crypto",
         "key": "Crypto",
+        "icon" :"Fingerprint",
         "submenu": [
           {
             "label": "Wallet",
@@ -101,6 +105,7 @@
       {
         "label": "Storage & Files",
         "key": "Stockage et Fichiers",
+        "icon" :"Fingerprint",
         "submenu": [
           {
             "label": "Cloud",
@@ -122,6 +127,7 @@
       {
         "label": "Productivity",
         "key": "Productivité",
+        "icon" :"Fingerprint",
         "submenu": [
           {
             "label": "Note Taking",

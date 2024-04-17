@@ -57,7 +57,7 @@ export async function Navbarmobile({ lang }: LocaleNavbarmobileProps) {
         <div className="flex items-center justify-between p-3">
           <div className="flex mr-4">
             <Link
-              href='/'
+              href={`/${lang}`}
               className="flex items-center text-3xl gap-6"
             >
               <Image className="rounded-md hidden dark:block" src={'/logo_app/logoblack.png'} width={39} height={39} alt="logo" />

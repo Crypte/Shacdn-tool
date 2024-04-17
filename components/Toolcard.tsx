@@ -9,6 +9,7 @@ import { InfoIcon } from "lucide-react";
 import { Suspense } from "react";
 import { AspectRatio } from "./ui/aspect-ratio";
 import { Card } from "./ui/card";
+import { Skeleton } from "./ui/skeleton";
 
 
 
@@ -16,7 +17,7 @@ type ToolcardProps = {
   id: number;
 };
 
-const Toolcard = ({ id }: ToolcardProps) => {
+async function Toolcard ({ id }: ToolcardProps) {
   const Tool = TOOL_LIST.find((item) => item.id === id);
 
   if (!Tool) {
@@ -24,6 +25,7 @@ const Toolcard = ({ id }: ToolcardProps) => {
   }
 
   return (
+    <Suspense fallback={<SkeletonCard/>}>
     <Card>
     <div className="relative rounded-2xl mb-4 lg:m-0 group transition-all">
       <Link href={Tool.link} target="_blank">
@@ -41,7 +43,7 @@ const Toolcard = ({ id }: ToolcardProps) => {
             </div>
         
             <div className="flex lg:ml-4">
-              <div className="mr-5 w-18 h-18">
+              <div className="mr-5">
                 <Image
                   className="rounded-2xl"
                   src={Tool.url_logo}
@@ -80,7 +82,31 @@ const Toolcard = ({ id }: ToolcardProps) => {
       </Link>
     </div>
     </Card>
+    </Suspense>
+    
   );
 };
 
 export default Toolcard;
+
+
+function SkeletonCard() {
+  return (
+    <div className="flex flex-col space-y-3">
+      <Skeleton className="h-[300px] w-[530px] rounded-xl" />
+      <div className="flex gap-3">
+        <Skeleton className="w-16 h-16 rounded-xl" />
+        <div className="flex flex-col justify-between py-2">
+        <Skeleton className="h-4 w-[100px]" />
+        <Skeleton className="h-4 w-[200px]" />
+        </div>
+      </div>
+      <Skeleton className="h-4 w-full" />
+      <Skeleton className="h-4 w-full" />
+      <Skeleton className="h-4 w-full" />
+      <Skeleton className="h-4 w-full" />
+      <Skeleton className="h-4 w-full" />
+      <Skeleton className="h-4 w-full" />
+    </div>
+  )
+}

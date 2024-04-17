@@ -43,6 +43,7 @@ async function Toolcard({ id }: ToolcardProps) {
     <Suspense fallback={<SkeletonCard/>}>
     <Card>
     <div className="relative rounded-2xl mb-4 lg:m-0 group transition-all">
+    {toolData.link && ( // add a conditional check for the link property
       <Link href={toolData.link} target="_blank">
           <div className="p-5 gap-5 flex flex-col">
             <div className="relative">
@@ -95,6 +96,7 @@ async function Toolcard({ id }: ToolcardProps) {
             )}
           </div>
       </Link>
+       )}
     </div>
     </Card>
     </Suspense>

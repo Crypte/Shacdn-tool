@@ -35,7 +35,7 @@ export const TOOL_LIST = [
         id: 4,
         nom: "Tor Browser",
         url: "tor-browser",
-        badge:["Opensource", "Anonymous","Basedonfirefox" ],
+        badge:["Opensource", "Anonymous","Basedonfirefox"],
         description: "Un navigateur web open source basé sur Firefox qui garantit l'anonymat et la confidentialité de l'utilisateur en chiffrant et en routant les données via les nœuds Tor, tout en bloquant les scripts et les traceurs.",
         url_logo: "/logo_tools/tor.png",
         url_img: "/img_tools/torfull.png",
@@ -58,7 +58,7 @@ export const TOOL_LIST = [
         badge:["Opensource", "Mobile"],
         description: "Un navigateur web mobile axé sur la confidentialité a été développé, mettant l'accent sur le blocage par défaut des traceurs et des publicités, ainsi que sur la suppression de l'historique de navigation à la sortie. Son interface minimaliste offre une expérience de navigation simplifiée",
         url_logo: "/logo_tools/firefox-focus.jpeg",
-        url_img: "",
+        url_img: "/img_tools/bravefull.png",
         link: "https://www.mozilla.org/en-US/firefox/browsers/mobile/focus/",
       },
       {
@@ -69,7 +69,6 @@ export const TOOL_LIST = [
         description: "Les YubiKeys sont des clés de sécurité matérielles compactes qui ajoutent une couche de protection supplémentaire aux comptes en ligne et aux données sensibles. Elles offrent une authentification à deux facteurs robuste.",
         url_logo: "/logo_tools/yubico.png",
         url_img: "/img_tools/yubicofull.png",
-        amazon:"https://www.amazon.fr/stores/Yubico/page/4E04488B-9AE1-45C8-A61C-72CC96929816?ref_=ast_bln",
         link: "https://www.yubico.com/"
       },
       {
@@ -172,9 +171,7 @@ export const TOOL_LIST = [
         description: "A company that develops and sells hardware wallets for crypto-currencies. These wallets are designed to store private keys securely, allowing users to maintain control over their crypto assets. They allow the owner to sign transactions without exposing the private key.",
         url_logo: "/logo_tools/ledger.png",
         url_img: "/img_tools/ledgerfull.png",
-        amazon:"https://www.amazon.fr/stores/Ledger/page/67737850-0B04-48CA-BB69-040409EA2E5D?ref_=ast_bln",
         link: "https://shop.ledger.com/fr/?r=9e045121f48b",
-        ourchoice:"yes"
       },
       {
         id: 18,
@@ -226,7 +223,7 @@ export const TOOL_LIST = [
         type: "Chiffrement",
         description: "VeraCrypt is an open-source disk encryption software that encrypts hard drives, partitions, and files to protect data from unauthorized access.",
         url_logo: "/logo_tools/veracrypt.png",
-        url_img: "",
+        url_img: "/img_tools/cryptomatorfull.png",
         link: "https://www.veracrypt.fr/en/Home.html"
       },
       {
@@ -281,7 +278,7 @@ export const TOOL_LIST = [
         type: "VPN",
         description: "OpenVPN is an open-source VPN solution known for its transparency and flexibility.",
         url_logo: "/logo_tools/openvpn.png",
-        url_img: "",
+        url_img: "/img_tools/cryptomatorfull.png",
         link: "https://openvpn.net"
       },
       {
@@ -324,7 +321,7 @@ export const TOOL_LIST = [
         badge:["Ourchoice","Ownindexer"],
         description: "DuckDuckGo is a search engine that focuses on protecting the privacy of its users by not storing their personal data or tracking them on the web. It uses third-party sources to provide relevant search results while protecting user privacy. In addition, it offers features such as search shortcuts and instant answers to enhance the online search experience.",
         url_logo: "/logo_tools/duckduckgo.png",
-        url_img: "",
+        url_img: "/img_tools/cryptomatorfull.png",
         link: "https://duckduckgo.com/"
       },
       {
@@ -334,7 +331,7 @@ export const TOOL_LIST = [
         badge:["Ownindexer"],
         description: "Qwant is a French search engine that stands out for its respect for privacy and neutrality. It uses its own search index to provide relevant and unfiltered results, without collecting personal data from its users. In addition, it offers unique features such as social search and shopping search to enhance the online search experience.",
         url_logo: "/logo_tools/qwant.png",
-        url_img: "",
+        url_img: "/img_tools/cryptomatorfull.png",
         link: "https://www.qwant.com/"
       },
       {
@@ -345,7 +342,7 @@ export const TOOL_LIST = [
         type: "Moteur de recherche",
         description: "Startpage is a search engine that respects the privacy of its users by not recording their IP address or search history. It uses a proxy to perform anonymous searches, without tracking users or filtering results. In addition, it offers a browser extension for an even more private online search experience.",
         url_logo: "/logo_tools/startpage.png",
-        url_img: "",
+        url_img: "/img_tools/cryptomatorfull.png",
         link: "https://www.startpage.com/fr/"
       },
       {
@@ -355,7 +352,7 @@ export const TOOL_LIST = [
         badge:["Ownindexer"],
         description: "Brave Search is a search engine launched by the Brave company that focuses on protecting the privacy of its users. It uses its own search index independent of other search engines to provide transparent and relevant search results. In addition, it offers advanced search options and result filters to allow users to customise their search experience.",
         url_logo: "/logo_tools/bravesearch.png",
-        url_img: "",
+        url_img: "/img_tools/cryptomatorfull.png",
         link: "https://search.brave.com/"
       },
       {
@@ -412,7 +409,7 @@ export const TOOL_LIST = [
         url: "gnupg",
         description: "GnuPG is an open-source data encryption software offering key features such as encryption key creation, file and email encryption, and file authenticity verification through digital signature. It ensures the confidentiality of your sensitive information, protects against data manipulation and facilitates secure communication over networks.",
         url_logo: "/logo_tools/gnupg.png",
-        url_img: "",
+        url_img: "/img_tools/cryptomatorfull.png",
         link: "https://gnupg.org/download/"
       },
       {
@@ -430,7 +427,7 @@ export const TOOL_LIST = [
         url: "gnupg",
         description: "Aegis Authenticator is an open-source two-factor authentication (2FA) application that stores your data locally for better privacy and security, offering a private alternative to other authentication applications.",
         url_logo: "/logo_tools/aegis.png",
-        url_img: "",
+        url_img: "/img_tools/cryptomatorfull.png",
         link: "https://getaegis.app"
       },
       {
@@ -449,7 +446,7 @@ export const TOOL_LIST = [
         url: "tutanota",
         description: "Tutanota is a secure, privacy-focused email service that offers end-to-end encryption for all emails, including attachments. It stores encryption keys securely on users' devices, ensuring that only recipients can access messages in the clear. Tutanota also offers features such as confidential emails, enhanced protection against online tracking and a user-friendly interface.",
         url_logo: "/logo_tools/tutanota.png",
-        url_img: "",
+        url_img: "/img_tools/cryptomatorfull.png",
         link: "https://tutanota.com/"
       },
       {
@@ -477,7 +474,7 @@ export const TOOL_LIST = [
         url: "Adguard",
         description: "AdGuard is an ad blocking and privacy extension that provides an ad-free browsing experience while enhancing the user's online security. With its advanced features, it allows users to customise filters and settings for tailored protection.",
         url_logo: "/logo_tools/adguard.png",
-        url_img: "",
+        url_img: "/img_tools/cryptomatorfull.png",
         link: "https://adguard.com/en/welcome.html"
       },
       {
@@ -486,7 +483,7 @@ export const TOOL_LIST = [
         url: "Adguard",
         description: "Time Guardian by Ternoa is a concept of a digital time capsule guaranteed by the Ternoa blockchain. It enables users to store data, messages, or memories in a secure and verifiable virtual vault, ensuring long-term preservation. Time Guardian allows users to define specific sending protocols, such as sending data at a precise date, postmortem deliveries, or through consensus agreements.",
         url_logo: "/logo_tools/timeguardian.jpg",
-        url_img :"/img_tools/timeguardianfull.png",
+        url_img:"/img_tools/timeguardianfull.png",
         link: "https://time-guardian.app/"
       },
       {
@@ -496,7 +493,7 @@ export const TOOL_LIST = [
         badge:["Bitcoin","Spot"],
         description: "Relai app is a popular mobile application for purchasing Bitcoin in Switzerland and Europe. It provides users with a simple and secure way to buy Bitcoin using SEPA bank transfers. Known for its user-friendly interface, Relai allows individuals to invest in Bitcoin seamlessly without requiring extensive technical knowledge.",
         url_logo: "/logo_tools/relaiapp.png",
-        url_img :"/img_tools/relaiappfull.png",
+        url_img:"/img_tools/relaiappfull.png",
         link: "https://relai.app/"
       },
       {
@@ -505,7 +502,7 @@ export const TOOL_LIST = [
         url: "Skiff",
         description: "Skiff is a secure collaboration software that focuses on data confidentiality and privacy. It offers features such as document sharing, end-to-end encrypted messaging and access permission control. Skiff enables teams to work together securely and confidentially, with an emphasis on protecting sensitive information.",
         url_logo: "/logo_tools/skiff.png",
-        url_img :"/img_tools/skiffpagefull.png",
+        url_img:"/img_tools/skiffpagefull.png",
         link: "https://skiff.com/pages"
       },{
         id: 52,
@@ -533,7 +530,7 @@ export const TOOL_LIST = [
         url: "keepassdx",
         description: "KeePassDX is an Android app for secure password management, featuring a user-friendly interface and custom password organization. It supports KeePass database format, offers strong password generation, cloud synchronization, and two-factor authentication support for enhanced security.",
         url_logo: "/logo_tools/keepassdx.png",
-        url_img: "",
+        url_img: "/img_tools/cryptomatorfull.png",
         link: "https://www.keepassdx.com/"
       },
       {
@@ -626,7 +623,7 @@ export const TOOL_LIST = [
         url: "privacy",
         description: "Privacy.com is a privacy-focused online service that provides virtual debit cards to users. These virtual cards can be used for online purchases, offering an extra layer of security by keeping users' personal and financial information hidden from merchants. Privacy.com helps users safeguard their privacy and control their online transactions.",
         url_logo: "/logo_tools/privacy.png",
-        url_img: "",
+        url_img: "/img_tools/cryptomatorfull.png",
         link: "https://privacy.com/"
       },
       {
@@ -635,7 +632,7 @@ export const TOOL_LIST = [
         url: "lydia",
         description: "Popular mobile payment app that enables users to send and receive money instantly with their smartphones. It also offers a unique feature of ephemeral cards, allowing users to create temporary virtual cards for secure online transactions.z",
         url_logo: "/logo_tools/lydia.png",
-        url_img: "",
+        url_img: "/img_tools/cryptomatorfull.png",
         link: "https://www.lydia-app.com/"
       },
       {
@@ -644,7 +641,7 @@ export const TOOL_LIST = [
         url: "revolut",
         description: "Revolut is a digital banking platform that offers various financial services, including international money transfers, currency exchange, and virtual debit cards. Revolut provides users with enhanced security features such as the ability to freeze/unfreeze cards instantly from the app and disabling contactless payments or online transactions, providing users with greater control over their financial information and transactions.",
         url_logo: "/logo_tools/revolut.png",
-        url_img: "",
+        url_img: "/img_tools/cryptomatorfull.png",
         link: "https://www.revolut.com/"
       },
       {
@@ -653,7 +650,7 @@ export const TOOL_LIST = [
         url: "wise",
         description: "Wise is a global money transfer service that enables users to send and receive money internationally at competitive exchange rates. Wise prioritizes privacy and freedom by employing secure encryption protocols to protect user data and transactions. They also advocate for transparency, openly disclosing their fees upfront and providing users with detailed information about the exchange rates applied.",
         url_logo: "/logo_tools/wise.png",
-        url_img: "",
+        url_img: "/img_tools/cryptomatorfull.png",
         link: "https://wise.com/"
       },
       {
@@ -662,7 +659,7 @@ export const TOOL_LIST = [
         url: "wise",
         description: "NVIDIA Broadcast is an AI-powered software suite that enhances audio and video quality, offering features like noise removal and virtual backgrounds, ideal for content creators. It provides a user-friendly interface and real-time processing capabilities, making it a convenient tool for streamers and professionals looking to improve their content creation experience.",
         url_logo: "/logo_tools/nvidiabroadcast.png",
-        url_img: "",
+        url_img: "/img_tools/cryptomatorfull.png",
         link: "https://www.nvidia.com/fr-fr/geforce/broadcasting/broadcast-app/"
       },
       {
@@ -671,7 +668,7 @@ export const TOOL_LIST = [
         url: "wise",
         description: "DaVinci Resolve is a professional video editing software that offers a comprehensive range of editing tools and features. It provides advanced color grading capabilities, allowing users to achieve stunning visual effects and enhance the overall look of their videos. With its intuitive interface and powerful capabilities, DaVinci Resolve is a go-to choice for many filmmakers and video editors.",
         url_logo: "/logo_tools/davinciresolve.png",
-        url_img: "",
+        url_img: "/img_tools/cryptomatorfull.png",
         link: "https://www.blackmagicdesign.com/products/davinciresolve"
       },
       {
@@ -680,7 +677,7 @@ export const TOOL_LIST = [
         url: "wise",
         description: "OBS (Open Broadcaster Software) is a popular streaming and recording software used by content creators and gamers. It allows users to capture and broadcast their screen or webcam footage, making it ideal for live streaming on platforms like Twitch or YouTube. With its user-friendly interface and customizable settings, OBS provides a seamless experience for capturing, editing, and streaming high-quality content.",
         url_logo: "/logo_tools/obs.png",
-        url_img: "",
+        url_img: "/img_tools/cryptomatorfull.png",
         link: "https://obsproject.com/"
       },
       {
@@ -689,7 +686,7 @@ export const TOOL_LIST = [
         url: "wise",
         description: "Audacity is a free and open-source audio editing software that offers a wide range of features for recording, editing, and mixing audio files. It provides a simple and intuitive interface, making it accessible to both beginners and experienced users. Audacity supports various audio formats and offers tools for removing background noise, adjusting volume levels, and applying effects to enhance the audio quality. With its versatility and ease of use, Audacity is a popular choice for audio editing tasks of all kinds.",
         url_logo: "/logo_tools/audacity.png",
-        url_img: "",
+        url_img: "/img_tools/cryptomatorfull.png",
         link: "https://www.audacityteam.org/"
       },
       {
@@ -698,7 +695,7 @@ export const TOOL_LIST = [
         url: "wise",
         description: "CapCut is a user-friendly mobile video editing application that offers a variety of features for editing and enhancing videos on the go. It provides a straightforward interface with intuitive controls, making it accessible to both beginners and casual users. CapCut allows users to trim, merge, and add various effects, filters, and transitions to their videos. With its simplicity and versatility, CapCut is a convenient choice for quick and easy video editing tasks directly from your mobile device.",
         url_logo: "/logo_tools/capcut.png",
-        url_img: "",
+        url_img: "/img_tools/cryptomatorfull.png",
         link: "https://www.capcut.com/"
       },
       {
@@ -827,7 +824,6 @@ export const TOOL_LIST = [
         description: "Debank est une plateforme de suivi de portefeuille offrant une vue complète des performances des investissements et des variations de prix",
         url_logo: "/logo_tools/secux.png",
         url_img: "/img_tools/secuxfull.png",
-        amazon :"https://amzn.eu/d/61wkyJ8",
         link: "https://shop.secuxtech.com/products/x-seed-plus-seed-phrase-storage"
       },
       {
@@ -838,7 +834,6 @@ export const TOOL_LIST = [
         description: "Debank est une plateforme de suivi de portefeuille offrant une vue complète des performances des investissements et des variations de prix",
         url_logo: "/logo_tools/cryptotag.png",
         url_img: "/img_tools/cryptotagfull.png",
-        amazon :"https://amzn.eu/d/aVgtg3o",
         link: "https://cryptotag.io/experience/zeus/"
       },
       {

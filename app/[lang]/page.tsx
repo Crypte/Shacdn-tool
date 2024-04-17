@@ -3,7 +3,6 @@ import { Locale } from "@/i18n-config";
 import { ArrowDown } from "lucide-react";
 import {CategorySection} from "@/components/CategorySection";
 import { Carrousel } from "@/components/Carrousel";
-import { BASE_API_URL } from "@/constants/constants";
 
 export default async function Home({
   params: { lang },

@@ -28,7 +28,7 @@ type ToolcardProps = {
 
 async function Toolcard({ id }: ToolcardProps) {
   async function getToolData() {
-    const res = await fetch(`http://localhost:3000/api/tools/${id}`);
+    const res = await fetch(`https://shacdn-tool-git-i18n-feature-gitcryptes-projects.vercel.app/api/tools/${id}`);
     const data = await res.json();
     console.log(data.tool);
     return data.tool;

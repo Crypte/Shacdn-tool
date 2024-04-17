@@ -9,6 +9,7 @@ import { Suspense } from "react";
 import { AspectRatio } from "./ui/aspect-ratio";
 import { Card } from "./ui/card";
 import { Skeleton } from "./ui/skeleton";
+import { BASE_API_URL } from "@/constants/constants";
 
 
 type ToolcardProps = {
@@ -17,7 +18,7 @@ type ToolcardProps = {
 
 async function Toolcard({ id }: ToolcardProps) {
   async function getToolData() {
-    const res = await fetch(`${process.env.API_URL}/tools/${id}`);
+    const res = await fetch(`${BASE_API_URL}/api/tools/${id}`);
     const data = await res.json();
     return data.tool;
   }

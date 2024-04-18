@@ -29,11 +29,15 @@ async function getToolData(id:number) {
 }
 
 async function Toolcard({ id }: ToolcardProps) {
+  if (!BASE_API_URL){
+    return null
+  }
   const toolData = await getToolData(id);
 
   if (!toolData) {
     return <div>Error loading tool data{id}</div>;
   }
+  
   return (
     <Suspense fallback={<SkeletonCard/>}>
     <Card>

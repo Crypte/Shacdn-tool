@@ -21,6 +21,7 @@ async function getToolData(id:number) {
   console.log(`${BASE_API_URL}/api/tools/${id}`)
   try {
     const data = await res.json();
+    console.log(data)
     return data;
   } catch (error) {
     console.error(error);
@@ -29,9 +30,6 @@ async function getToolData(id:number) {
 }
 
 async function Toolcard({ id }: ToolcardProps) {
-  if (!BASE_API_URL){
-    return null
-  }
   const toolData = await getToolData(id);
 
   if (!toolData) {

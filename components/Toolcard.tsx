@@ -47,6 +47,7 @@ function Toolcard({ id }: ToolcardProps) {
   }
 
   return (
+    <>
     <Card>
       <div className="relative rounded-2xl mb-4 lg:m-0 group transition-all">
         {toolData.link && (
@@ -115,6 +116,8 @@ function Toolcard({ id }: ToolcardProps) {
         )}
       </div>
     </Card>
+    <SkeletonCard />
+    </>
   );
 }
 
@@ -122,7 +125,8 @@ export default Toolcard;
 
 function SkeletonCard() {
   return (
-    <div className="flex flex-col space-y-3">
+    <Card className="bg-muted/10">
+    <div className="flex flex-col space-y-5 p-5">
       <Skeleton className="h-[300px] w-[530px] rounded-xl" />
       <div className="flex gap-3">
         <Skeleton className="w-16 h-16 rounded-xl" />
@@ -131,12 +135,15 @@ function SkeletonCard() {
           <Skeleton className="h-4 w-[200px]" />
         </div>
       </div>
+      <div className="space-y-2.5">
       <Skeleton className="h-4 w-full" />
       <Skeleton className="h-4 w-full" />
       <Skeleton className="h-4 w-full" />
       <Skeleton className="h-4 w-full" />
       <Skeleton className="h-4 w-full" />
       <Skeleton className="h-4 w-full" />
+      </div>
     </div>
+    </Card>
   );
 }

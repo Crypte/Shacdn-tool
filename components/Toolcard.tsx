@@ -18,10 +18,8 @@ type ToolcardProps = {
 
 async function getToolData(id:number) {
   const res = await fetch(`${BASE_API_URL}/api/tools/${id}`);
-  console.log(`${BASE_API_URL}/api/tools/${id}`)
   try {
     const data = await res.json();
-    console.log(data)
     return data;
   } catch (error) {
     console.error(error);

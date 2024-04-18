@@ -18,20 +18,21 @@ type ToolcardProps = {
 
 async function getToolData(id:number) {
   const res = await fetch(`${BASE_API_URL}/api/tools/${id}`);
-  try {
-    const data = await res.json();
-    return data.tool;
-  } catch (error) {
-    console.error(error);
-    return null;
+
+  if (!res.ok) {
+    // This will activate the closest `error.js` Error Boundary
+    throw new Error('Failed to fetch data');
   }
+
+  return res.json();
 }
 
-async function Toolcard({ id }: ToolcardProps) {
+async function Toolcard({ id }:ToolcardProps) {
+
   const toolData = await getToolData(id);
 
   if (!toolData) {
-    return <div>Error loading tool data{id}</div>;
+    return <div>Error loading tool data</div>;
   }
   return (
     <Suspense fallback={<SkeletonCard/>}>

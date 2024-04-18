@@ -33,8 +33,10 @@ function Toolcard({ id }: ToolcardProps) {
 
   useEffect(() => {
     const fetchToolData = async () => {
+      setTimeout(async () => {
       const data = await getToolData(id);
       setToolData(data);
+    }, 1000);
     };
 
     fetchToolData();

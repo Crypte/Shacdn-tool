@@ -28,8 +28,6 @@ async function getToolData(id:number) {
 }
 
 async function Toolcard({ id }: ToolcardProps) {
-
-
   const toolData = await getToolData(id);
 
   if (!toolData) {

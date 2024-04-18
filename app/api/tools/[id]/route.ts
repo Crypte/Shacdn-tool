@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { TOOL_LIST } from "@/constants/tool_en";
 
-export async function GET(request: Request, context: any) {
+export async function GET(request:Request, context:any) {
   const { params } = context;
   const tool = TOOL_LIST.find((item) => params.id === item.id.toString());
 

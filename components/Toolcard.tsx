@@ -116,7 +116,6 @@ function Toolcard({ id }: ToolcardProps) {
         )}
       </div>
     </Card>
-    <SkeletonCard />
     </>
   );
 }

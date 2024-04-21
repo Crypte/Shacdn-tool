@@ -56,8 +56,6 @@ function Toolcard({ id }: ToolcardProps) {
               <div className="relative">
                 <AspectRatio ratio={16 / 9}>
                   <Image
-                    placeholder="blur"
-                    blurDataURL="https://placehold.co/1920x1080"
                     className="rounded-lg object-cover"
                     src={toolData.url_img}
                     alt="logo"

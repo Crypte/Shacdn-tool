@@ -4,8 +4,7 @@ type BadgeProps = {
   variant: string;
 };
 
-export const Badge = ({ variant }: BadgeProps) => {
-  // Recherchez le badge correspondant dans BADGE_TAB
+export function Badge ({ variant }: BadgeProps) {  // Recherchez le badge correspondant dans BADGE_TAB
   const badgeInfo = BADGE_TAB[variant];
 
   if (!badgeInfo) {

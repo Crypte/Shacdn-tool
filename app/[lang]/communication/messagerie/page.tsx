@@ -5,8 +5,7 @@ import { InfoBox } from "@/components/InfoBox"
 
 export default function Page() {
 
-  const email = [1, 2, 74]
-  const Messagerie = [13, 14, 76]
+  const Messagerie = [13, 14]
   
   return (
     <div>

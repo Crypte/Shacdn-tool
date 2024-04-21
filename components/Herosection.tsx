@@ -1,22 +1,48 @@
-import { ArrowDown } from "lucide-react";
-import { Carrousel } from "./Carrousel";
+import { Locale } from "@/i18n-config";
+import { getDictionary } from "@/get-dictionary";
 import { Button } from "./ui/button";
 
+interface LocaleHerosectionProps {
+    lang: Locale;
+  }
 
-export const Herosection = () => {
+
+export async function Herosection({ lang }: LocaleHerosectionProps){
+    const dictionary = await getDictionary(lang);
     return (
-        <div className="mt-44 relative">
+        <div className="relative py-20">
                     <div className="gradient-background red"></div>
                     <div className="gradient-background blue"></div>
                     <div className="gradient-background green"></div>
-                <div className="text-center flex flex-col overflow-hidden items-center">
-                    <h2 className=' text-xl mb-10 text-primary'>Reprenez le contrôle</h2>
-                    <h1 className=' text-6xl lg:text-7xl font-bold tracking-tight text-center mb-14'>Sécurité. Productivité. Efficacité. </h1>
-                    <Carrousel/>
-                    <ArrowDown className="mt-20 h-10 w-10 animate-bounce" />
-                </div>
+       
+     
+          <div>
+            <div className="text-center mx-auto">
+            
+              <div className="mt-5">
+                <h1 className="scroll-m-20 text-4xl font-bold tracking-tight lg:text-7xl">
+                  {dictionary.herosection.bigslogan}
+                </h1>
+              </div>
+            
+              <div className="mt-6 max-w-3xl mx-auto">
+                <p className="text-xl text-muted-foreground">
+                  Over 10+ fully responsive, UI blocks you can drop into your
+                  Shadcn UI projects and customize to your heart&apos;s content.
+                </p>
+              </div>
+             
+              <div className="mt-8 gap-3 flex justify-center">
+                <Button size={"lg"}>Get started</Button>
+                <Button size={"lg"} variant={"outline"}>
+                  Learn more
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
                 
-     </div>
+
 
     );
 };

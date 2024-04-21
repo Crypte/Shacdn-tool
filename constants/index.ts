@@ -16,7 +16,7 @@ export const NAV_BAR = [
         label: 'Communication',
         key: 'Communication',
         submenu: [
-            { label: 'Email', icon: Mail, href:'/communication/email',title: "Fournisseurs d'email de premier ordre", subtitle: "Protégez vos email." },
+            { label: 'Email', icon: Mail, href:'/communication/email' },
             { label: 'Messagerie', icon: MessageCircle, href:'/communication/messagerie', title: "Services de messagerie confidentiels.", subtitle: "Pour toutes vos conversations privées."  }
         ]
     },

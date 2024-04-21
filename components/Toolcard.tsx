@@ -1,5 +1,3 @@
-'use client'
-
 import Image from "next/image";
 import Link from "next/link";
 import { Badge } from "./Badge";
@@ -17,7 +15,7 @@ type ToolcardProps = {
   id: number;
 };
 
-async function getToolData(id: number) {
+async function getToolData(id:number) {
   const res = await fetch(`${BASE_API_URL}/api/tools/${id}`);
   try {
     const data = await res.json();
@@ -28,22 +26,12 @@ async function getToolData(id: number) {
   }
 }
 
-function Toolcard({ id }: ToolcardProps) {
-  const [toolData, setToolData] = useState<any>(null);
+async function Toolcard({ id }: ToolcardProps) {
 
-  useEffect(() => {
-    const fetchToolData = async () => {
-      setTimeout(async () => {
-      const data = await getToolData(id);
-      setToolData(data);
-    }, 1000);
-    };
-
-    fetchToolData();
-  }, [id]);
+  const toolData = await getToolData(id);
 
   if (!toolData) {
-    return <SkeletonCard />;
+    return <div>Error loading tool data{id}</div>;
   }
 
   return (
@@ -124,28 +112,3 @@ function Toolcard({ id }: ToolcardProps) {
 }
 
 export default Toolcard;
-
-function SkeletonCard() {
-  return (
-    <Card className="bg-muted/10">
-    <div className="flex flex-col space-y-5 p-5">
-      <Skeleton className="h-[300px] w-[530px] rounded-xl" />
-      <div className="flex gap-3">
-        <Skeleton className="w-16 h-16 rounded-xl" />
-        <div className="flex flex-col justify-between py-2">
-          <Skeleton className="h-4 w-[100px]" />
-          <Skeleton className="h-4 w-[200px]" />
-        </div>
-      </div>
-      <div className="space-y-2.5">
-      <Skeleton className="h-4 w-full" />
-      <Skeleton className="h-4 w-full" />
-      <Skeleton className="h-4 w-full" />
-      <Skeleton className="h-4 w-full" />
-      <Skeleton className="h-4 w-full" />
-      <Skeleton className="h-4 w-full" />
-      </div>
-    </div>
-    </Card>
-  );
-}

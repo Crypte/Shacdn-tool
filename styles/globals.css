@@ -6,7 +6,7 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --background-gradient: rgb(255,255,255);
+    --background-gradient: rgb(255, 255, 255);
     --foreground: 240 10% 3.9%;
     --card: 0 0% 100%;
     --card-foreground: 240 10% 3.9%;
@@ -24,13 +24,13 @@
     --destructive-foreground: 0 0% 98%;
     --border: 240 5.9% 90%;
     --input: 240 5.9% 90%;
-    --ring: 142.1 76.2% 36.3%;
+    --ring: 52 98% 50%;
     --radius: 0.6rem;
   }
 
   .dark {
     --background: 210 11% 11%;
-    --background-gradient: rgb(12,10,9);
+    --background-gradient: rgb(25, 28, 31);
     --foreground: 0 0% 95%;
     --card: 206 10 10%;
     --card-foreground: 0 0% 95%;
@@ -48,7 +48,7 @@
     --destructive-foreground: 0 85.7% 97.3%;
     --border: 210 7% 18%;
     --input: 240 3.7% 15.9%;
-    --ring: 142.4 71.8% 29.2%;
+    --ring: 52 98% 50%;
   }
 }
 
@@ -63,7 +63,7 @@
 }
 
 .container{
-  max-width: 1200px;
+  max-width: 1400px;
 }
 
  /* Carrousel */

@@ -65,7 +65,6 @@ export async function Navbarmobile({ lang }: LocaleNavbarmobileProps) {
           </div>
           <div className="flex items-center gap-2">
           <LocaleSwitcher lang={lang}/>
-          <ThemeSwitch/>
           <Button variant={'outline'} size={'icon'} asChild>
           <Link href="/bon-plan" target="blank">
           <BsTwitterX className="h-[1.2rem] w-[1.2rem]" />
@@ -77,7 +76,7 @@ export async function Navbarmobile({ lang }: LocaleNavbarmobileProps) {
             </Link>
         </Button>
           <SheetTrigger asChild>
-            <Button variant="outline" size={'icon'}><Menu/></Button>
+            <Button aria-label="hanburger-menu" variant="outline" size={'icon'}><Menu/></Button>
           </SheetTrigger>
           </div>
         </div>

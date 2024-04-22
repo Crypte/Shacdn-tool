@@ -6,6 +6,7 @@ import { Navbarmobile } from "@/components/Navbar-mobile";
 import { ThemeProvider } from "@/components/Theme-provider";
 import { i18n, type Locale } from "../../i18n-config"
 import { Siteconfig } from "@/config/site";
+import { Footer } from "@/components/Footer";
 
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }));
@@ -41,6 +42,7 @@ export default function RootLayout({
       <div className='container mt-28'>
       {children}
       </div>
+      <Footer lang={params.lang}/>
       </ThemeProvider>
     </body>
   </html>

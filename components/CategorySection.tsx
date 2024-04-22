@@ -24,9 +24,7 @@ export async function CategorySection({ lang }: LocaleCategorySection) {
   const dictionary = await getDictionary(lang);
 
   return (
-    <div className="container">
-      
-      
+    <div className="py-28 ">
           <div className="grid md:grid-cols-2 grid-cols-1 lg:gap-6 gap-4">
               {dictionary.NAV_BAR.map((item, index) => (
                 <Card key={index}>

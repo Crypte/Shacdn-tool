@@ -10,11 +10,10 @@ export default async function Home({
   params: { lang: Locale };
 }) {
   return (
-    <div className="lg:space-y-36 space-y-28 ">
+    <>
       <Herosection lang={lang}/>
       <CategorySection lang={lang}/>
       <Carrousel/>
-    
-    </div>
+    </>
   );
 }

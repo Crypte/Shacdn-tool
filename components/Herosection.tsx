@@ -10,7 +10,7 @@ interface LocaleHerosectionProps {
 export async function Herosection({ lang }: LocaleHerosectionProps){
     const dictionary = await getDictionary(lang);
     return (
-        <div className="relative py-20">
+        <div className="relative py-28">
                     <div className="gradient-background red"></div>
                     <div className="gradient-background blue"></div>
                     <div className="gradient-background green"></div>

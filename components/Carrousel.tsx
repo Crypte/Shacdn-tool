@@ -10,7 +10,7 @@ export const Carrousel = () => {
 
   return (
 
-    <div>
+    <div className="py-28">
       <div className="text-center mb-14">
       <Badge className="mb-4" variant="outline">New</Badge>
       <div>

@@ -36,11 +36,10 @@ async function Toolcard({ id }: ToolcardProps) {
 
   return (
     <>
-    <Card>
-      <div className="relative rounded-2xl mb-4 lg:m-0 group transition-all">
+    <Card className="group hover:-translate-y-2 transition">
+      <div className="relative rounded-2xl mb-4 lg:m-0 transition-all">
         {toolData.link && (
-          <Link href={toolData.link} target="_blank">
-            <div className="p-5 gap-5 flex flex-col">
+          <Link href={toolData.link} target="_blank" className="p-2 gap-3 flex flex-col">
               <div className="relative">
                 <AspectRatio ratio={16 / 9}>
                   <Image
@@ -55,7 +54,7 @@ async function Toolcard({ id }: ToolcardProps) {
                     fill
                   />
                 </AspectRatio>
-                <div className="flex w-fit gap-1.5 flex-wrap absolute bottom-0 left-0 right-0 p-4">
+                <div className="flex w-fit gap-1.5 flex-wrap absolute bottom-0 left-0 right-0 p-3">
                   {toolData.badge &&
                     toolData.badge.map((badge: any, index: any) => (
                       <Badge variant={badge} key={index} />
@@ -63,7 +62,7 @@ async function Toolcard({ id }: ToolcardProps) {
                 </div>
               </div>
 
-              <div className="flex lg:ml-4">
+              <div className="flex lg:ml-2">
                 <div className="mr-5">
                   <Image
                     className="rounded-2xl"
@@ -92,17 +91,20 @@ async function Toolcard({ id }: ToolcardProps) {
                 </div>
               </div>
 
-              <p className="text-base text-muted-foreground text-justify">
+              <p className="text-sm text-muted-foreground text-justify px-2">
                 {toolData.description}
               </p>
+               <div className="h-16 bg-foreground/5 rounded-md w-full grid grid-cols-2 gap-2 place-items-center">
+                  <div>
+                      <p className="text-muted-foreground">platform</p>
+                      badge
+                  </div>
 
-              {toolData.offer && (
-                <p className="justify-center text-center rounded-md transition p-2 text-sm border border-primary text-foreground flex gap-2 items-center font-semibold">
-                  Parrainage : {''}
-                  {toolData.offer}
-                </p>
-              )}
-            </div>
+                  <div>
+                      hello
+                  </div>
+              </div>
+
           </Link>
         )}
       </div>

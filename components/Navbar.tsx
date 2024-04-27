@@ -52,7 +52,7 @@ export async function Navbar({ lang }: LocaleNavbarProps) {
         <ul className="gap-1 flex">
           {dictionary.NAV_BAR.map((item,index) => (
             <li key={index} className='group p-1.5 rounded-lg flex gap-1 relative items-center cursor-default '>
-              <span className="transition text-muted-foreground group-hover:text-primary">{item.label}</span>
+              <span className="transition text-sm text-muted-foreground group-hover:text-primary">{item.label}</span>
               <ChevronDown size={20} className="group-hover:rotate-180 transition text-muted-foreground group-hover:text-primary"/>
               <div className="top-full group-hover:pointer-events-auto pointer-events-none absolute pt-7 transition opacity-0 group-hover:opacity-100 duration-200">
                 <div className="rounded-2xl scale-95 group-hover:scale-100 flex flex-col w-fit shadow shadow-foreground/30 p-3 transition duration-200 bg-background">

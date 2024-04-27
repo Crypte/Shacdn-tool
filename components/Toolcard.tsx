@@ -42,7 +42,7 @@ async function Toolcard({ id }: ToolcardProps) {
                 <AspectRatio ratio={16 / 9}>
                   <Image
                     className="rounded-lg object-cover"
-                    src={toolData.url_img}
+                    src={"https://tool-image.s3.eu-north-1.amazonaws.com/img_tools/arcfull.png"}
                     alt="logo"
                     sizes="(max-width: 300px) 100vw,
                     (max-width: 500px) 100vw,
@@ -64,7 +64,7 @@ async function Toolcard({ id }: ToolcardProps) {
                 <div className="mr-5">
                   <Image
                     className="rounded-2xl"
-                    src={toolData.url_logo}
+                    src={"https://tool-image.s3.eu-north-1.amazonaws.com/img_tools/arcfull.png"}
                     alt={toolData.nom}
                     width={64}
                     height={64}

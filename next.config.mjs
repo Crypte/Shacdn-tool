@@ -1,8 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['tool-image.s3.eu-north-1.amazonaws.com'],
-},
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'tool-image.s3.eu-north-1.amazonaws.com',
+        port: '',
+      },
+    ],
+  },
 };
 
 export default nextConfig;

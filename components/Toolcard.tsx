@@ -4,8 +4,6 @@ import { Badge } from "./Badge";
 import { Platform } from "./Platform";
 import { PartyPopper } from "lucide-react";
 import { ExternalLink } from "lucide-react";
-import { InfoIcon } from "lucide-react";
-import { Suspense, useState, useEffect } from "react";
 import { AspectRatio } from "./ui/aspect-ratio";
 import { Card } from "./ui/card";
 import { Skeleton } from "./ui/skeleton";

@@ -27,9 +27,9 @@ export default ToolGrid;
 
 function SkeletonCard() {
   return (
-    <Card className="bg-muted/10">
-    <div className="flex flex-col space-y-5 p-5">
-      <Skeleton className="h-[300px] w-[530px] rounded-xl" />
+    <Card className="bg-muted/10 p-1">
+    <div className="flex flex-col space-y-5">
+      <Skeleton className="h-[201px] w-[358px] rounded-xl" />
       <div className="flex gap-3">
         <Skeleton className="w-16 h-16 rounded-xl" />
         <div className="flex flex-col justify-between py-2">

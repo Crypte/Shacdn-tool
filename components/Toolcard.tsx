@@ -1,16 +1,27 @@
+'use client'
+import { ExternalLink } from "lucide-react";
+import { AspectRatio } from "./ui/aspect-ratio";
+import { Card } from "./ui/card";
+import { BASE_API_URL } from "@/constants/constants";
+import React, { useEffect, useState } from 'react';
 import Image from "next/image";
 import Link from "next/link";
 import { Badge } from "./Badge";
 import { Platform } from "./Platform";
-import { PartyPopper } from "lucide-react";
-import { ExternalLink } from "lucide-react";
-import { AspectRatio } from "./ui/aspect-ratio";
-import { Card } from "./ui/card";
-import { Skeleton } from "./ui/skeleton";
-import { BASE_API_URL } from "@/constants/constants";
+
 
 type ToolcardProps = {
   id: number;
+};
+
+type ToolData = {
+  url_img: string;
+  url_logo: string;
+  link: string;
+  badge: any[];
+  nom: string;
+  platform: any[];
+  description: string;
 };
 
 async function getToolData(id:number) {
@@ -24,16 +35,26 @@ async function getToolData(id:number) {
   }
 }
 
-async function Toolcard({ id }: ToolcardProps) {
+function Toolcard({ id }: ToolcardProps) {
+  const [toolData, setToolData] = useState<ToolData | null>(null);
 
-  const toolData = await getToolData(id);
+  useEffect(() => {
+    async function fetchData() {
+      const data = await getToolData(id);
+      setToolData(data);
+    }
+
+    fetchData();
+  }, [id]);
 
   if (!toolData) {
-    return <div>Error loading tool data{id}</div>;
+    return <div>Loading...</div>;
   }
 
   console.log(toolData.url_img)
   console.log(toolData.url_logo)
+
+  
   return (
     <>
     <Card className="group hover:-translate-y-2 transition">

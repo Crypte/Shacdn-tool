@@ -32,6 +32,8 @@ async function Toolcard({ id }: ToolcardProps) {
     return <div>Error loading tool data{id}</div>;
   }
 
+  console.log(toolData.url_img)
+  console.log(toolData.url_logo)
   return (
     <>
     <Card className="group hover:-translate-y-2 transition">
@@ -42,7 +44,7 @@ async function Toolcard({ id }: ToolcardProps) {
                 <AspectRatio ratio={16 / 9}>
                   <Image
                     className="rounded-lg object-cover"
-                    src={"https://tool-image.s3.eu-north-1.amazonaws.com/img_tools/arcfull.png"}
+                    src={toolData.url_img}
                     alt="logo"
                     sizes="(max-width: 300px) 100vw,
                     (max-width: 500px) 100vw,
@@ -64,7 +66,7 @@ async function Toolcard({ id }: ToolcardProps) {
                 <div className="mr-5">
                   <Image
                     className="rounded-2xl"
-                    src={"https://tool-image.s3.eu-north-1.amazonaws.com/img_tools/arcfull.png"}
+                    src={toolData.url_logo}
                     alt={toolData.nom}
                     width={64}
                     height={64}

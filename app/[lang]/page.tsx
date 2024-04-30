@@ -1,6 +1,6 @@
 import { Herosection } from "@/components/Herosection";
 import { Locale } from "@/i18n-config";
-import {CategorySection} from "@/components/CategorySection";
+import {BestSection} from "@/components/BestSection";
 import { Carrousel } from "@/components/Carrousel";
 
 export default async function Home({
@@ -9,10 +9,10 @@ export default async function Home({
   params: { lang: Locale };
 }) {
   return (
-    <>
+    <div className='space-y-6'>
       <Herosection lang={lang}/>
-      <CategorySection lang={lang}/>
+      <BestSection/>
       <Carrousel/>
-    </>
+    </div>
   );
 }

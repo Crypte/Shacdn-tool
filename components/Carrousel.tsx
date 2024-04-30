@@ -10,9 +10,9 @@ export const Carrousel = () => {
 
   return (
 
-    <div className="py-28">
+    <div className="py-28 bg-orange-400/20 rounded-2xl">
       <div className="text-center mb-14">
-      <Badge className="mb-4" variant="outline">New</Badge>
+      <Badge className="mb-4" variant="outline">Frequently update</Badge>
       <div>
       <p className=" lg:text-5xl text-3xl font-bold mb-6">+100 outils listés </p></div>
       <p className="text-muted-foreground">Pour couvrir tout vos besoin en terme de sécruité</p>

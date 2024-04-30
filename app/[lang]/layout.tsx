@@ -39,7 +39,7 @@ export default function RootLayout({
       <Navbarmobile lang ={params.lang}/>
       <Navbar lang ={params.lang} />
         </div>
-      <div className='container mt-28'>
+      <div className='container mt-20'>
       {children}
       </div>
       <Footer lang={params.lang}/>

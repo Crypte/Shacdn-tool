@@ -39,7 +39,8 @@ async function Toolcard({ id }: ToolcardProps) {
     <Card className="group hover:-translate-y-2 transition">
       <div className="relative rounded-2xl mb-4 lg:m-0 transition-all">
         {toolData.link && (
-          <Link href={toolData.link} target="_blank" className="p-2 gap-3 flex flex-col">
+          <Link href={toolData.link} target="_blank" className="p-2 flex flex-col">
+            <div className="space-y-3 grow">
               <div className="relative">
                 <AspectRatio ratio={16 / 9}>
                   <Image
@@ -91,10 +92,12 @@ async function Toolcard({ id }: ToolcardProps) {
                 </div>
               </div>
 
-              <p className="text-sm text-muted-foreground text-justify px-2">
-                {toolData.description}
-              </p>
-               <div className="h-16 bg-foreground/5 rounded-md w-full grid grid-cols-2 gap-2 place-items-center">
+                <p className="text-sm text-muted-foreground text-justify px-2">
+                  {toolData.description}
+                </p>
+              </div>
+
+               <div className="h-16 bg-foreground/5 rounded-md w-full grid grid-cols-2 gap-2 place-items-center ">
                   <div>
                       <p className="text-muted-foreground">platform</p>
                       badge

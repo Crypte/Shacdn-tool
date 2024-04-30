@@ -895,6 +895,16 @@ export const TOOL_LIST = [
         url_logo: "https://tool-image.s3.eu-north-1.amazonaws.com/logo_tools/nextdns.jpg",
         url_img: "https://tool-image.s3.eu-north-1.amazonaws.com/img_tools/incognifull.png",
         link: "https://mega.io/"
+      },
+      {
+        id: 93,
+        nom: "Github Copilot",
+        url: "github-copilot",
+        badge:[],
+        description: "Interrogez, visualisez, partagez et exportez des données sur plus de 15 blockchains différentes.",
+        url_logo: "https://tool-image.s3.eu-north-1.amazonaws.com/logo_tools/githubcopilot.png",
+        url_img: "https://tool-image.s3.eu-north-1.amazonaws.com/img_tools/incognifull.png",
+        link: "https://mega.io/"
       }
       
       

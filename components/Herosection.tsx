@@ -2,7 +2,7 @@ import { Button } from "./ui/button";
 
 export const Herosection=() =>{
     return (
-        <div className="relative py-28 bg-cyan-500/20 rounded-2xl">
+        <div className="relative py-28 bg-gradient-to-r from-cyan-400/20 to-blue-500/20 rounded-2xl">
           <div>
             <div className="text-center mx-auto">
             

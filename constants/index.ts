@@ -16,15 +16,15 @@ export const NAV_BAR = [
         label: 'Communication',
         key: 'Communication',
         submenu: [
-            { label: 'Email', icon: Mail, href:'/explore/email' },
-            { label: 'Messagerie', icon: MessageCircle, href:'/explore/messagerie', title: "Services de messagerie confidentiels.", subtitle: "Pour toutes vos conversations privées."  }
+            { label: 'Email', icon: Mail, href:'/explore/email', subtitle: "idée? " },
+            { label: 'Messagerie', icon: MessageCircle, href:'/explore/messagerie', title: "Services de messagerie confidentiels.", subtitle: "Des conversations privées."  }
         ]
     },
     {
         label: 'Sécurité',
         key: 'Sécurité',
         submenu: [
-            { label: 'Mots de passe', icon: FormInput, href:'/explore/gestionnaire-mdp',title: "Meilleurs gestionnaires de mots de passe.", subtitle: "N'oubliez jamais un mot de passe à nouveau.",  },
+            { label: 'Mots de passe', icon: FormInput, href:'/explore/gestionnaire-mdp',title: "Meilleurs gestionnaires de mots de passe.", subtitle: "Plus jamais le même mot de passe.",  },
             { label: 'Auth à deux facteurs', icon: CheckCheck, href:'/explore/2FA', title: "Authentification à deux facteurs (2FA).", subtitle: "Une couche supplémentaire de sécurité."  },
             { label: 'Antivirus', icon: ShieldCheck, href:'/explore/antivirus',title: "Antivirus les plus efficaces", subtitle: "Votre meilleur allié."  },
             { label: 'Matériel', icon: CircuitBoard, href:'/explore/materiel',title: "Outils de sécurité matérielle", subtitle: "Minimisez les risques."  }
@@ -34,7 +34,7 @@ export const NAV_BAR = [
         label: 'Crypto',
         key: 'Crypto',
         submenu: [
-            { label: 'Wallet', icon: Wallet, href:'/crypto/wallet'},
+            { label: 'Wallet', icon: Wallet, href:'/crypto/wallet', subtitle: "Pour votre fortune"},
             { label: 'Échanges Crypto', icon: Coins, href:'/explore/exchanges',title: "Plateformes d'échange fiables", subtitle: "Pour vos achats."  },
             { label: 'Explorateur', icon: PackageCheck, href:'/explore/explorer',title: "Explorateurs", subtitle: "Ne loupez rien on chain."  }
         ]

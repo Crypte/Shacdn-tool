@@ -31,7 +31,7 @@ export const Navbar = () => {
                       <span className="p-2 bg-foreground/10 rounded-lg"><item2.icon/></span>
                       <div>
                       {item2.label}
-                      <p className="text-muted-foreground text-xs mt-1">BEst result </p>
+                      <p className="text-muted-foreground text-xs mt-1">{item2.subtitle}</p>
                       </div>
                     </Link>
                   ))}

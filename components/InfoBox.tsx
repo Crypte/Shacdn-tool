@@ -4,7 +4,7 @@ import { AlertCircle, CheckCircle2, AlertTriangle,Info } from "lucide-react";
 interface InfoBoxProps {
   children: ReactNode;
   variant: string;
-  title?: string
+  title: string
 }
 
 export const InfoBox = ({ children, variant,title }:InfoBoxProps) => {
@@ -34,16 +34,12 @@ export const InfoBox = ({ children, variant,title }:InfoBoxProps) => {
   }
 
   return (
-    <div className={`infobox border-l-4 w-fit py-3 px-3.5 rounded-xl my-3 text-foreground ${boxClass}`}>
-      <div className="flex items-center">
-        <div className="flex text-3xl w-6 h-6">
-          {boxIcon}
-        </div>
-        <div className="ml-4">
-        {title && <p className="font-extrabold mb-2">{title}</p>}
-        <p className=" text-base">{children}</p>
-        </div>
+    <div className={`border-l-4 w-fit py-3 px-3.5 rounded-xl my-3 text-foreground ${boxClass}`}>
+      <div className="flex items-center mb-2 gap-3 text-xl font-bold">
+          <p className="">{boxIcon}</p>
+          <p>{title}</p>
       </div>
+        <p className=" text-base">{children}</p>
     </div>
   );
 };

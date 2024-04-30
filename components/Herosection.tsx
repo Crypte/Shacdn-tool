@@ -1,14 +1,8 @@
-import { Locale } from "@/i18n-config";
-import { getDictionary } from "@/get-dictionary";
 import { Button } from "./ui/button";
 
-interface LocaleHerosectionProps {
-    lang: Locale;
-  }
 
 
-export async function Herosection({ lang }: LocaleHerosectionProps){
-    const dictionary = await getDictionary(lang);
+export const Herosection=() =>{
     return (
         <div className="relative py-28 bg-cyan-500/20 rounded-2xl">
           <div>
@@ -16,7 +10,7 @@ export async function Herosection({ lang }: LocaleHerosectionProps){
             
               <div className="mt-5">
                 <h1 className="scroll-m-20 text-4xl font-bold tracking-tight lg:text-7xl">
-                  {dictionary.herosection.bigslogan}
+                  Safety. Productivity. Efficiency.
                 </h1>
               </div>
             

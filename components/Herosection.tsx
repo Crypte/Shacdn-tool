@@ -1,7 +1,5 @@
 import { Button } from "./ui/button";
 
-
-
 export const Herosection=() =>{
     return (
         <div className="relative py-28 bg-cyan-500/20 rounded-2xl">

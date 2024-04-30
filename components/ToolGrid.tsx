@@ -11,7 +11,7 @@ type ToolGridProps = {
 
 const ToolGrid = ({ toolIds }: ToolGridProps) => {
   return (
-    <div className="md:grid md:grid-cols-3 gap-5 my-6 flex flex-col">
+    <div className="md:grid md:grid-cols-3 gap-5 mt-6 flex flex-col">
       {toolIds.map((id,index) => (
         <Suspense key={index} fallback={<SkeletonCard/>}>
           <Toolcard id={id}/>

@@ -32,12 +32,10 @@ async function Toolcard({ id }: ToolcardProps) {
     return <div>Error loading tool data{id}</div>;
   }
 
-  console.log(toolData.url_img)
-  console.log(toolData.url_img)
   return (
     <>
-    <Card className="group hover:-translate-y-2 transition">
-      <div className="relative rounded-2xl mb-4 lg:m-0 transition-all">
+    <Card className="group hover:-translate-y-2 relative rounded-2xl mb-4 lg:m-0 transition-all pb-2">
+      
         {toolData.link && (
           <Link href={toolData.link} target="_blank" className="p-2 flex flex-col">
             <div className="space-y-3 grow">
@@ -97,20 +95,9 @@ async function Toolcard({ id }: ToolcardProps) {
                 </p>
               </div>
 
-               <div className="h-16 bg-foreground/5 rounded-md w-full grid grid-cols-2 gap-2 place-items-center ">
-                  <div>
-                      <p className="text-muted-foreground">platform</p>
-                      badge
-                  </div>
-
-                  <div>
-                      hello
-                  </div>
-              </div>
-
           </Link>
         )}
-      </div>
+
     </Card>
     </>
   );

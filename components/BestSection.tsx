@@ -10,17 +10,13 @@ import { Separator } from "./ui/separator";
 export const BestSection=() => {
   const encryption = [17,10,19,23,44,52]
   return (
-    <Card>
-    <CardHeader>
-     <div className="flex justify-between items-center">
-        <h1 className=" font-bold text-3xl">Latest listing</h1>
+    <div className="md:p-6 p-3 border rounded-2xl">
+     <div className="flex justify-between items-center mb-3">
+        <h1 className=" font-bold md:text-4xl text-2xl">Latest listing</h1>
      </div>
      <Separator/>
-     </CardHeader>
-     <CardContent>
      <ToolGrid toolIds={encryption}/>
-      </CardContent>
-    </Card>
+    </div>
   );
 }
 

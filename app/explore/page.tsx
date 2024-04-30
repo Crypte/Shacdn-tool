@@ -10,7 +10,7 @@ import { H1 } from "@/components/H1";
 import { P } from "@/components/P";
 
 async function getToolData() {
-  const res = await fetch(`${BASE_API_URL}/api/tools/`);
+  const res = await fetch(`${BASE_API_URL}/api/tools`);
   try {
     const data = await res.json();
     return data;
@@ -23,10 +23,13 @@ async function getToolData() {
 
 export default async function Home() {
   const data = await getToolData();
+  if (!data) {
+    return <div>Error loading tool data</div>;
+  }
   return (
     <>
     <H1>All tools </H1>
-        <P>Avoir un navigateur respectueux de la vie privée est crucial dans le paysage numérique d'aujourd'hui. Cela garantit que vos informations personnelles restent confidentielles et hors de la portée des traqueurs de données et des annonceurs. Protéger votre vie privée en ligne est essentiel pour maintenir le contrôle de votre identité numérique et assurer une sensation de sécurité lors de la navigation sur le Web.</P>
+        <P>Avoir</P>
     <div className="grid grid-cols-3 gap-3">
      {data.map((tool:any, id:any) => (
          <Card key={id} className="group hover:-translate-y-2 transition">

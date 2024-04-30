@@ -1,10 +1,5 @@
 import { ThemeSwitch } from "./Theme-switch";
 import { BsTwitterX } from "react-icons/bs";
-import { i18n, Locale } from "../i18n-config";
-import { getDictionary } from "../get-dictionary";
-import {EyeOff,Compass, Search, ShieldX, Mail, MessageCircle, FormInput, CheckCheck, ShieldCheck, CircuitBoard, Wallet, Coins, PackageCheck, UploadCloud, FileKey, Eraser, BrainCircuit, StickyNote, Users } from "lucide-react";
-import { LocaleSwitcher } from "./Locale-switcher";
-
 import {
   Sheet,
   SheetClose,
@@ -21,35 +16,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button } from "./ui/button";
 import { Menu } from "lucide-react";
+import { NAV_BAR } from "@/constants";
 
-interface LocaleNavbarmobileProps {
-  lang: Locale;
-}
-const iconComponents= {
-  Compass: <Compass />,
-  Search: <Search />,
-  ShieldX: <ShieldX />,
-  Mail: <Mail />,
-  MessageCircle: <MessageCircle />,
-  FormInput: <FormInput />,
-  CheckCheck: <CheckCheck />,
-  ShieldCheck: <ShieldCheck />,
-  CircuitBoard: <CircuitBoard />,
-  Wallet: <Wallet />,
-  Coins: <Coins />,
-  PackageCheck: <PackageCheck />,
-  UploadCloud: <UploadCloud />,
-  FileKey: <FileKey />,
-  Eraser: <Eraser />,
-  BrainCircuit: <BrainCircuit />,
-  StickyNote: <StickyNote />,
-  Users: <Users />,
-  EyeOff : <EyeOff/>
-};
-
- 
-export async function Navbarmobile({ lang }: LocaleNavbarmobileProps) {
-  const dictionary = await getDictionary(lang);
+export const Navbarmobile =() => {
   return (
     <div className="xl:hidden block">
     <Sheet>
@@ -57,15 +26,14 @@ export async function Navbarmobile({ lang }: LocaleNavbarmobileProps) {
         <div className="flex items-center justify-between p-3">
           <div className="flex mr-4">
             <Link
-              href={`/${lang}`}
+              href={`/`}
               className="flex items-center text-3xl gap-6"
             >
               <Image className="rounded-md" src={'/logo_app/logo.png'} width={39} height={39} alt="logo" />
             </Link>
           </div>
           <div className="flex items-center gap-2">
-          <LocaleSwitcher lang={lang}/>
-          <Button variant={'outline'} size={'icon'} asChild>
+          <Button variant={'ghost'} size={'icon'} asChild>
           <Link href="/bon-plan" target="blank">
           <BsTwitterX className="h-[1.2rem] w-[1.2rem]" />
           </Link>
@@ -75,6 +43,7 @@ export async function Navbarmobile({ lang }: LocaleNavbarmobileProps) {
             Info
             </Link>
         </Button>
+        <ThemeSwitch/>
           <SheetTrigger asChild>
             <Button aria-label="hanburger-menu" variant="outline" size={'icon'}><Menu/></Button>
           </SheetTrigger>
@@ -88,7 +57,7 @@ export async function Navbarmobile({ lang }: LocaleNavbarmobileProps) {
       <SheetTitle>Menu</SheetTitle>
       
         <ScrollArea className="h-full my-6 pb-10">
-        {dictionary.NAV_BAR.map((item,index) => (
+        {NAV_BAR.map((item,index) => (
             <div key={index} className="mb-3">
               <h2 className="mb-3 text-xl pb-2 border-b text-foreground font-bold">{item.label}</h2>
               {item.submenu.map((item,index) => (
@@ -98,7 +67,7 @@ export async function Navbarmobile({ lang }: LocaleNavbarmobileProps) {
                 >
                   <label className="py-2 text-center cursor-pointer transition duration-300 ease-in-out flex items-center text-muted-foreground text-lg">
                     <div className="flex items-center gap-2">
-                    <span className="p-1.5">{iconComponents[item.icon as keyof typeof iconComponents]}</span>
+                    <span className="p-1.5"><item.icon/></span>
                       <span>{item.label}</span>
                     </div>
                   </label>

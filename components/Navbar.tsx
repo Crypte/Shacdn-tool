@@ -4,27 +4,18 @@ import { ChevronDown } from "lucide-react";
 import { BsTwitterX } from "react-icons/bs";
 import { ThemeSwitch } from "./Theme-switch";
 import { Button } from "./ui/button";
-import { LocaleSwitcher } from "./Locale-switcher";
-import { i18n, Locale } from "../i18n-config";
-import { getDictionary } from "../get-dictionary";
 import { NAV_BAR } from "@/constants";
-import { ReactElement } from "react";
 import { Siteconfig } from "@/config/site";
 
 import {EyeOff,Compass, Search, ShieldX, Mail, MessageCircle, FormInput, CheckCheck, ShieldCheck, CircuitBoard, Wallet, Coins, PackageCheck, UploadCloud, FileKey, Eraser, BrainCircuit, StickyNote, Users } from "lucide-react";
 
-interface LocaleNavbarProps {
-  lang: Locale;
-}
 
-export async function Navbar({ lang }: LocaleNavbarProps) {
-  const dictionary = await getDictionary(lang);
+export const Navbar = () => {
   
-
   return (
     <div className="fixed w-full py-2 xl:block hidden border-b border-foreground/10 backdrop-blur-xl bg-background/70">
       <nav className="container flex items-center justify-between rounded-xl">
-        <Link href={`/${lang}`} className="h-full mr-1.5 flex items-center gap-4">
+        <Link href={`/`} className="h-full mr-1.5 flex items-center gap-4">
           <Image className="rounded-md" src={'/logo_app/logo.png'} width={39} height={39} alt="logo" />
           <span className="font-bold text-2xl">Brand</span>
         </Link>
@@ -36,11 +27,11 @@ export async function Navbar({ lang }: LocaleNavbarProps) {
               <div className="top-full group-hover:pointer-events-auto pointer-events-none absolute pt-7 transition opacity-0 group-hover:opacity-100 duration-200">
                 <div className="rounded-2xl scale-95 group-hover:scale-100 flex flex-col w-fit shadow shadow-foreground/30 p-3 transition duration-200 bg-background">
                   {item.submenu.map((item2,index) => (
-                    <Link key={index} href={`/${lang}${item2.href}`} className="p-2 whitespace-nowrap hover:bg-foreground/10 rounded-md flex items-center gap-4">
+                    <Link key={index} href={`${item2.href}`} className="p-2 whitespace-nowrap hover:bg-foreground/10 rounded-md flex items-center gap-4">
                       <span className="p-2 bg-foreground/10 rounded-lg"><item2.icon/></span>
                       <div>
                       {item2.label}
-                      <p className="text-muted-foreground text-xs mt-1">BEst result </p>
+                      <p className="text-muted-foreground text-xs mt-1">{item2.subtitle}</p>
                       </div>
                     </Link>
                   ))}
@@ -51,7 +42,7 @@ export async function Navbar({ lang }: LocaleNavbarProps) {
         </ul>
 
         <div className="flex items-center gap-3 h-full">
-        <Button variant={'outline'} size={'icon'} asChild>
+        <Button variant={'ghost'} size={'icon'} asChild>
           <Link href={Siteconfig.links.twitter} target="blank">
             <BsTwitterX className="h-[1.2rem] w-[1.2rem]" />
           </Link>
@@ -62,7 +53,7 @@ export async function Navbar({ lang }: LocaleNavbarProps) {
             Contact
             </Link>
         </Button>
-        <LocaleSwitcher lang={lang}/>
+        <ThemeSwitch/>
         </div>
       </nav>
     </div>

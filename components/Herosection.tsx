@@ -2,7 +2,7 @@ import { Button } from "./ui/button";
 
 export const Herosection=() =>{
     return (
-        <div className="relative py-28 bg-gradient-to-r from-cyan-400/20 to-blue-500/20 rounded-2xl">
+        <div className="relative px-4 py-28 bg-gradient-to-r from-cyan-400/20 to-blue-500/20 rounded-2xl">
           <div>
             <div className="text-center mx-auto">
             
@@ -14,8 +14,7 @@ export const Herosection=() =>{
             
               <div className="mt-6 max-w-3xl mx-auto">
                 <p className="text-xl text-muted-foreground">
-                  Over 10+ fully responsive, UI blocks you can drop into your
-                  Shadcn UI projects and customize to your heart&apos;s content.
+                Over 100+ tools to help you daily adopt good habits and protect yourself
                 </p>
               </div>
              

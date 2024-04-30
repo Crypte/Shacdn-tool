@@ -15,7 +15,7 @@ export const Carrousel = () => {
       <Badge className="mb-4" variant="outline">Frequently update</Badge>
       <div>
       <p className=" lg:text-5xl text-3xl font-bold mb-4">+100 outils listés </p></div>
-      <p className="text-muted-foreground">Pour couvrir tout vos besoin en terme de sécruité</p>
+      <p className="text-xl text-muted-foreground">Pour couvrir tout vos besoin en terme de sécruité</p>
       </div>
     <div className="scroller mx-auto ">
     <div className="scroller__inner">

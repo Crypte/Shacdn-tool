@@ -31,9 +31,7 @@ async function Toolcard({ id }: ToolcardProps) {
   if (!toolData) {
     return <div>Error loading tool data{id}</div>;
   }
-
-  console.log(toolData.url_img)
-  console.log(toolData.url_img)
+  
   return (
     <>
     <Card className="group hover:-translate-y-2 transition">

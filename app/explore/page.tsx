@@ -10,7 +10,7 @@ import { H1 } from "@/components/H1";
 import { P } from "@/components/P";
 
 async function getToolData() {
-  const res = await fetch(`${BASE_API_URL}/api/tools/`);
+  const res = await fetch(`${BASE_API_URL}/api/tools`);
   try {
     const data = await res.json();
     return data;

@@ -11,7 +11,7 @@ export default function Page() {
     <div>
 
 
-        <H1 subtitle={'Vie privée et résultats optimaux.'}>Moteur de recherche</H1>
+        <H1>Moteur de recherche</H1>
         <P>Avoir un navigateur respectueux de la vie privée est crucial dans le paysage numérique d'aujourd'hui. Cela garantit que vos informations personnelles restent confidentielles et hors de la portée des traqueurs de données et des annonceurs. Protéger votre vie privée en ligne est essentiel pour maintenir le contrôle de votre identité numérique et assurer une sensation de sécurité lors de la navigation sur le Web.</P>
 
         <H2>Navigateur de bureau</H2>

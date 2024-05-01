@@ -20,7 +20,7 @@ export function Path() {
     return null
    }
   return (
-    <Breadcrumb>
+    <Breadcrumb className="mb-4">
       <BreadcrumbList>
         <BreadcrumbItem>
           <BreadcrumbLink href="/explore">Explore Tools</BreadcrumbLink>

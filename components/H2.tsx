@@ -8,7 +8,7 @@ interface H2Props {
 
 export const H2 = ({ className, children }: H2Props) => {
   return (
-    <h2 className={`w-fit scroll-m-20 border-b-2 pb-1 mt-10 text-3xl font-bold tracking-tight first:mt-0 ${className}`}>
+    <h2 className={`mt-10 scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0 ${className}`}>
       {children}
     </h2>
   );

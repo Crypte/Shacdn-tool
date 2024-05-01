@@ -7,9 +7,9 @@ interface ListProps {
   data: String[];
 }
 
-export const List = ({ className, children, data }: ListProps) => {
+export const List = ({ className, data }: ListProps) => {
   return (
-    <ul className="my-6 ml-6 list-disc [&>li]:mt-2">
+    <ul className={`my-6 ml-6 list-disc [&>li]:mt-2 ${className}`}>
       {data.map((item, index) => (
         <li key={index}>{item}</li>
       ))}

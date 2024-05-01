@@ -90,16 +90,6 @@ export default async function Home() {
                  <p className="text-sm text-muted-foreground text-justify px-2">
                    {tool.description}
                  </p>
-                  <div className="h-16 bg-foreground/5 rounded-md w-full grid grid-cols-2 gap-2 place-items-center">
-                     <div>
-                         <p className="text-muted-foreground">platform</p>
-                         badge
-                     </div>
-   
-                     <div>
-                         hello
-                     </div>
-                 </div>
    
              </Link>
            )}

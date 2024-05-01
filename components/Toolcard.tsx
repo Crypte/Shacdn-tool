@@ -90,7 +90,7 @@ async function Toolcard({ id }: ToolcardProps) {
                 </div>
               </div>
 
-                <p className="text-sm text-muted-foreground text-justify px-2">
+                <p className="leading-6 text-sm text-muted-foreground px-2">
                   {toolData.description}
                 </p>
               </div>

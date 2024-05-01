@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { TOOL_LIST } from "@/constants/tool_en";
+import { TOOL_LIST } from "@/constants/tool_data";
 
 export async function GET(request:Request, context:any) {
   const { params } = context;

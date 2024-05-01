@@ -2,7 +2,7 @@
 import { Badge } from "./ui/badge";
 
 import Image from "next/image";
-import { TOOL_LIST } from "@/constants/tool_en";
+import { TOOL_LIST } from "@/constants/tool_data";
 
 export const Carrousel = () => {
   

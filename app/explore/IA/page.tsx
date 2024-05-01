@@ -5,7 +5,7 @@ import { InfoBox } from "@/components/InfoBox";
 import { H2 } from "@/components/H2";
 
 export default function Page() {
-  const Cex = [59,90,60,61]
+  const Cex = [59,90,60,61,93]
 
   return (
       <div>

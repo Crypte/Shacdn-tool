@@ -36,7 +36,7 @@ export const InfoBox = ({ children, variant,title }:InfoBoxProps) => {
   return (
     <div className={`border-l-4 w-fit py-3 px-3.5 rounded-xl my-3 text-foreground ${boxClass}`}>
       <div className="flex items-center mb-2 gap-3 text-xl font-bold">
-          <p className="">{boxIcon}</p>
+          <p>{boxIcon}</p>
           <p>{title}</p>
       </div>
         <p className=" text-base">{children}</p>

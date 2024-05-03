@@ -1,11 +1,14 @@
+import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
+import { BsTwitterX } from "react-icons/bs";
 
 export const Herosection=() =>{
     return (
-        <div className="relative px-4 py-28 bg-gradient-to-r from-cyan-400/20 to-blue-500/20 rounded-2xl">
+        <div className="relative px-4 py-32">
           <div>
             <div className="text-center mx-auto">
-            
+              
+              <Badge variant={'secondary'}>Version : V0</Badge>
               <div className="mt-5">
                 <h1 className="scroll-m-20 text-4xl font-bold tracking-tight lg:text-7xl">
                   Safety. Productivity. Efficiency.
@@ -19,9 +22,9 @@ export const Herosection=() =>{
               </div>
              
               <div className="mt-8 gap-3 flex justify-center">
-                <Button size={"lg"}>Get started</Button>
-                <Button size={"lg"} variant={"outline"}>
-                  Learn more
+                <Button>Get started</Button>
+                <Button variant={'outline'}>
+                    <BsTwitterX className="mr-2 h-4 w-4" />Twitter
                 </Button>
               </div>
             </div>

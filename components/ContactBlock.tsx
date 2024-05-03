@@ -11,10 +11,10 @@ export function ContactBlock() {
  
   return (
     
-      <div className="bg-blue-700/10 rounded-xl md:px-12 px-6 py-10 grid items-center md:grid-cols-2 my-10">
+      <div className="bg-primary/20 rounded-xl md:px-12 px-6 py-10 grid items-center md:grid-cols-2 my-10">
         <div className="text-center md:text-left">
-           <h1 className="lg:text-4xl text-3xl font-bold mb-2">Restons en contact</h1>
-           <h2 className="text-xl text-muted-foreground">Ayez les dernières informations</h2>
+           <h1 className="lg:text-4xl text-3xl font-bold mb-2">Stay tuned</h1>
+           <h2 className="text-xl text-muted-foreground">Join us or contact us</h2>
         </div>
         <div className="flex flex-wrap gap-8 md:justify-end justify-center mt-6 md:mt-0">
           <Link href={''} className="p-3 bg-muted-foreground/10 transition rounded-lg hover:opacity-70">

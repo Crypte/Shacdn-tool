@@ -11,7 +11,7 @@ export function ContactBlock() {
  
   return (
     
-      <div className="bg-primary/20 rounded-xl md:px-12 px-6 py-10 grid items-center md:grid-cols-2 my-10">
+      <div className="bg-red-400/10 rounded-xl md:px-12 px-6 py-10 grid items-center md:grid-cols-2 my-10">
         <div className="text-center md:text-left">
            <h1 className="lg:text-4xl text-3xl font-bold mb-2">Stay tuned</h1>
            <h2 className="text-xl text-muted-foreground">Join us or contact us</h2>

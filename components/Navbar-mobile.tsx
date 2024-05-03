@@ -29,7 +29,8 @@ export const Navbarmobile =() => {
               href={`/`}
               className="flex items-center text-3xl gap-6"
             >
-              <Image className="rounded-md" src={'/logo_app/logo.png'} width={39} height={39} alt="logo" />
+               <Image className="rounded-md block dark:hidden" src={'/logo_app/logowhite.png'} width={39} height={39} alt="logo" />
+          <Image className="rounded-md hidden dark:block" src={'/logo_app/logoblack.png'} width={39} height={39} alt="logo" />
             </Link>
           </div>
           <div className="flex items-center gap-2">

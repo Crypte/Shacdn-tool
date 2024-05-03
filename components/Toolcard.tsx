@@ -6,7 +6,6 @@ import { PartyPopper } from "lucide-react";
 import { ExternalLink } from "lucide-react";
 import { AspectRatio } from "./ui/aspect-ratio";
 import { Card } from "./ui/card";
-import { Skeleton } from "./ui/skeleton";
 import { BASE_API_URL } from "@/constants/constants";
 
 type ToolcardProps = {
@@ -14,7 +13,12 @@ type ToolcardProps = {
 };
 
 async function getToolData(id:number) {
-  const res = await fetch(`${BASE_API_URL}/api/tools/${id}`);
+  const res = await fetch(`${BASE_API_URL}/api/tools/${id}`, {
+    method: 'GET',
+    headers: {
+      'Cache-Control': 'no-cache'
+    }
+  });
   try {
     const data = await res.json();
     return data;

@@ -3,7 +3,6 @@ import {H1} from "@/components/H1";
 import ToolGrid from "@/components/ToolGrid";
 import { InfoBox } from "@/components/InfoBox";
 import { H2 } from "@/components/H2";
-import { Alert } from "@/components/ui/alert";
 
 export default function Page() {
 

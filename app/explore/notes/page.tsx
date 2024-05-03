@@ -1,8 +1,6 @@
 import { P } from "@/components/P";
 import {H1} from "@/components/H1";
 import ToolGrid from "@/components/ToolGrid";
-import { InfoBox } from "@/components/InfoBox";
-import { H2 } from "@/components/H2";
 
 export default function Page() {
   const note = [23,55,53,24,83,57]

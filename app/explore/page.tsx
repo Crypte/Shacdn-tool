@@ -8,24 +8,11 @@ import { Platform } from "@/components/Platform";
 import { Badge } from "@/components/Badge";
 import { H1 } from "@/components/H1";
 import { P } from "@/components/P";
-
-async function getToolData() {
-  const res = await fetch(`${BASE_API_URL}/api/tools`);
-  try {
-    const data = await res.json();
-    return data;
-  } catch (error) {
-    console.error(error);
-    return null;
-  }
-}
+import { TOOL_LIST } from "@/constants/tool_data";
 
 
-export default async function Home() {
-  const data = await getToolData();
-  if (!data) {
-    return <div>Error loading tool data</div>;
-  }
+export default function Home() {
+  const data = TOOL_LIST;
   return (
     <>
     <H1>All tools </H1>

@@ -6,40 +6,22 @@ import { PartyPopper } from "lucide-react";
 import { ExternalLink } from "lucide-react";
 import { AspectRatio } from "./ui/aspect-ratio";
 import { Card } from "./ui/card";
-import { BASE_API_URL } from "@/constants/constants";
+import { TOOL_LIST } from "@/constants/tool_data";
 
 type ToolcardProps = {
   id: number;
 };
 
-async function getToolData(id:number) {
-  const res = await fetch(`${BASE_API_URL}/api/tools/${id}`, {
-    method: 'GET',
-    headers: {
-      'Cache-Control': 'no-cache'
-    }
-  });
-  try {
-    const data = await res.json();
-    return data;
-  } catch (error) {
-    console.error(error);
-    return null;
-  }
-}
+export default function Toolcard({ id }: ToolcardProps) {
 
-async function Toolcard({ id }: ToolcardProps) {
-
-  const toolData = await getToolData(id);
+  const toolData = TOOL_LIST.find((item) => id === item.id);
 
   if (!toolData) {
     return <div>Error loading tool data{id}</div>;
   }
-
   return (
     <>
     <Card className="group hover:-translate-y-2 relative rounded-2xl mb-4 lg:m-0 transition-all pb-2">
-      
         {toolData.link && (
           <Link href={toolData.link} target="_blank" className="p-2 flex flex-col">
             <div className="space-y-3 grow">
@@ -106,5 +88,3 @@ async function Toolcard({ id }: ToolcardProps) {
     </>
   );
 }
-
-export default Toolcard;

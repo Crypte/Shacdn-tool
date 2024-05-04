@@ -1,33 +1,72 @@
 // icone pour badge
 import { IconType } from "react-icons";
 
-import {AiFillTool,AiFillWindows,AiFillBank,AiOutlineGoogle,AiFillCheckCircle,AiFillApple,AiOutlineSwap} from 'react-icons/ai'
-import {FaAndroid,FaKey,FaUsb,FaBitcoin,FaChrome,FaGooglePlay,FaLinux,FaAppStoreIos,FaApple,FaIdCard,FaWallet,FaCoins,FaEthereum,FaCodeBranch,FaWindows,} from 'react-icons/fa'
-import {BiWorld,BiHide,BiCoinStack,BiCheckDouble,BiTargetLock,BiCandles,BiSolidMedal} from 'react-icons/bi'
-import {BsToggleOn,BsBrowserChrome,BsCurrencyExchange,BsFillCreditCard2BackFill,BsBrowserFirefox,BsCloudCheckFill,BsNvidia,BsBrowserEdge} from 'react-icons/bs'
-import {GoDeviceMobile} from 'react-icons/go'
-import {TbTargetOff,TbExchange} from 'react-icons/tb'
-import {SiYubico,SiAppstore,SiPolkadot,SiMatrix} from 'react-icons/si'
-import {MdMoneyOffCsred, MdLocalAirport} from 'react-icons/md'
-import {DiBingSmall} from 'react-icons/di'
+import {
+  AiFillTool,
+  AiFillWindows,
+  AiFillBank,
+  AiOutlineGoogle,
+  AiFillCheckCircle,
+  AiFillApple,
+  AiOutlineSwap,
+} from "react-icons/ai";
+import {
+  FaAndroid,
+  FaKey,
+  FaUsb,
+  FaBitcoin,
+  FaChrome,
+  FaGooglePlay,
+  FaLinux,
+  FaAppStoreIos,
+  FaApple,
+  FaIdCard,
+  FaWallet,
+  FaCoins,
+  FaEthereum,
+  FaCodeBranch,
+  FaWindows,
+} from "react-icons/fa";
+import {
+  BiWorld,
+  BiHide,
+  BiCoinStack,
+  BiCheckDouble,
+  BiTargetLock,
+  BiCandles,
+  BiSolidMedal,
+} from "react-icons/bi";
+import {
+  BsToggleOn,
+  BsBrowserChrome,
+  BsCurrencyExchange,
+  BsFillCreditCard2BackFill,
+  BsBrowserFirefox,
+  BsCloudCheckFill,
+  BsNvidia,
+  BsBrowserEdge,
+} from "react-icons/bs";
+import { GoDeviceMobile } from "react-icons/go";
+import { TbTargetOff, TbExchange } from "react-icons/tb";
+import { SiYubico, SiAppstore, SiPolkadot, SiMatrix } from "react-icons/si";
+import { MdMoneyOffCsred, MdLocalAirport } from "react-icons/md";
+import { DiBingSmall } from "react-icons/di";
 import { GiReceiveMoney } from "react-icons/gi";
 import { IoHardwareChip } from "react-icons/io5";
-import {IoLogoAndroid} from "react-icons/io"
+import { IoLogoAndroid } from "react-icons/io";
 import { RiFinderFill } from "react-icons/ri";
-
-
 
 export interface BADGE_TAB {
   name: string;
   icon: IconType;
-  color?:string;
+  color?: string;
 }
 
 export const BADGE_TAB: Record<string, BADGE_TAB> = {
   Ourchoice: {
     name: "Our choice",
     icon: BiSolidMedal,
-    color:"#ffd500"
+    color: "#ffd500",
   },
   Opensource: {
     name: "Open source",
@@ -45,7 +84,7 @@ export const BADGE_TAB: Record<string, BADGE_TAB> = {
     name: "Anonymous",
     icon: BiHide,
   },
-  Ads:{
+  Ads: {
     name: "With or Without ads",
     icon: BsToggleOn,
   },
@@ -72,7 +111,7 @@ export const BADGE_TAB: Record<string, BADGE_TAB> = {
   Yubikeys: {
     name: "Yubikeys",
     icon: SiYubico,
-    color:"#89C129"
+    color: "#89C129",
   },
   Exchange: {
     name: "Exchange",
@@ -93,12 +132,12 @@ export const BADGE_TAB: Record<string, BADGE_TAB> = {
   Bitcoin: {
     name: "Bitcoin",
     icon: FaBitcoin,
-    color:"#F7931A"
+    color: "#F7931A",
   },
   Bitcoinonly: {
     name: "Bitcoin only",
     icon: FaBitcoin,
-    color:"#F7931A",
+    color: "#F7931A",
   },
   Basedonfirefox: {
     name: "Based on Firefox",
@@ -148,7 +187,7 @@ export const BADGE_TAB: Record<string, BADGE_TAB> = {
   Polkadot: {
     name: "Polkadot",
     icon: SiPolkadot,
-    color:"#FF09B6"
+    color: "#FF09B6",
   },
   Banktransfer: {
     name: "Bank transfer",
@@ -169,7 +208,7 @@ export const BADGE_TAB: Record<string, BADGE_TAB> = {
   Proofofreserves: {
     name: "Proof of reserves",
     icon: AiFillCheckCircle,
-    color:"#0BDA51",
+    color: "#0BDA51",
   },
   Applepay: {
     name: "Apple Pay",
@@ -211,45 +250,38 @@ export const BADGE_TAB: Record<string, BADGE_TAB> = {
     name: "Protocole Matrix",
     icon: SiMatrix,
   },
-
-}as const;
+} as const;
 
 // icone pour platform
 
 export interface PLATFORM_TAB {
-  category:string;
+  category: string;
   icon: IconType;
 }
 
-
 export const PLATFORM_TAB: Record<string, PLATFORM_TAB> = {
-Mac: {
-  category :"desktop",
-  icon: FaApple,
-},
-Windows: {
-  category :"desktop",
-  icon: FaWindows,
-},
-Linux: {
-  category :"desktop",
-  icon: FaLinux,
-},
-Ios: {
-  category :"mobile",
-  icon: FaAppStoreIos,
-},
-Browser: {
-  category :"Browser",
-  icon: BiWorld,
-},
-Android: {
-  category :"mobile",
-  icon: IoLogoAndroid,
-}
-}
-
-
-
-
-  
+  Mac: {
+    category: "desktop",
+    icon: FaApple,
+  },
+  Windows: {
+    category: "desktop",
+    icon: FaWindows,
+  },
+  Linux: {
+    category: "desktop",
+    icon: FaLinux,
+  },
+  Ios: {
+    category: "mobile",
+    icon: FaAppStoreIos,
+  },
+  Browser: {
+    category: "Browser",
+    icon: BiWorld,
+  },
+  Android: {
+    category: "mobile",
+    icon: IoLogoAndroid,
+  },
+};

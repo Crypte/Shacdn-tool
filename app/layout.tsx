@@ -18,27 +18,24 @@ export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
-  
 }>) {
   return (
-    <html lang='en' suppressHydrationWarning>
-    <body id='body' className={inter.className}>
-    <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-      <div className='fixed top-0 z-50 '>
-      <Navbarmobile/>
-      <Navbar />
-        </div>
-      <div className='container mt-20'>
-      {children}
-      </div>
-      <Footer/>
-      </ThemeProvider>
-    </body>
-  </html>
+    <html lang="en" suppressHydrationWarning>
+      <body id="body" className={inter.className}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <div className="fixed top-0 z-50 ">
+            <Navbarmobile />
+            <Navbar />
+          </div>
+          <div className="container mt-20">{children}</div>
+          <Footer />
+        </ThemeProvider>
+      </body>
+    </html>
   );
 }

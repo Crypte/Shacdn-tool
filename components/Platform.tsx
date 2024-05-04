@@ -1,5 +1,4 @@
-import {PLATFORM_TAB } from "@/constants/badges";
-
+import { PLATFORM_TAB } from "@/constants/badges";
 
 type PlatformProps = {
   variant: string;
@@ -13,9 +12,7 @@ export const Platform = ({ variant }: PlatformProps) => {
     return null; // Gérer le cas où le badge n'est pas trouvé
   }
 
-  const {icon: IconComponent } = platformInfo;
+  const { icon: IconComponent } = platformInfo;
 
-  return (
-       <IconComponent size={17} className={` ${variant}`} />
-  );
+  return <IconComponent size={17} className={` ${variant}`} />;
 };

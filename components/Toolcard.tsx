@@ -13,7 +13,6 @@ type ToolcardProps = {
 };
 
 export default function Toolcard({ id }: ToolcardProps) {
-
   const toolData = TOOL_LIST.find((item) => id === item.id);
 
   if (!toolData) {
@@ -21,9 +20,13 @@ export default function Toolcard({ id }: ToolcardProps) {
   }
   return (
     <>
-    <Card className="group hover:-translate-y-1 relative rounded-2xl mb-4 lg:m-0 transition-all pb-2">
+      <Card className="group hover:-translate-y-1 relative rounded-2xl mb-4 lg:m-0 transition-all pb-2">
         {toolData.link && (
-          <Link href={toolData.link} target="_blank" className="p-2 flex flex-col">
+          <Link
+            href={toolData.link}
+            target="_blank"
+            className="p-2 flex flex-col"
+          >
             <div className="space-y-3 grow">
               <div className="relative">
                 <AspectRatio ratio={16 / 9}>
@@ -76,15 +79,13 @@ export default function Toolcard({ id }: ToolcardProps) {
                 </div>
               </div>
 
-                <p className="leading-6 text-sm text-muted-foreground px-2">
-                  {toolData.description}
-                </p>
-              </div>
-
+              <p className="leading-6 text-sm text-muted-foreground px-2">
+                {toolData.description}
+              </p>
+            </div>
           </Link>
         )}
-
-    </Card>
+      </Card>
     </>
   );
 }

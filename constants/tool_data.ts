@@ -29,6 +29,7 @@ export const TOOL_LIST = [
   {
     id: 2,
     nom: "StartMail",
+    url: "startmail",
     badge: ["Browser", "Encrypted"],
     description:
       " StartMail provides a secure email environment with a familiar interface, featuring unique tools like auto-deletion and alias creation to enhance user privacy.",
@@ -86,7 +87,7 @@ export const TOOL_LIST = [
     description:
       "Designed for mobile use, Firefox Focus automatically deletes history and blocks a wide range of online trackers for a clean, private browsing experience.",
     url_logo:
-      "https://tool-image.s3.eu-north-1.amazonaws.com/logo_tools/firefox-focus.jpeg",
+      "https://tool-image.s3.eu-north-1.amazonaws.com/logo_tools/firefox-focus.webp",
     url_img:
       "https://tool-image.s3.eu-north-1.amazonaws.com/img_tools/bravefull.webp",
     link: "https://www.mozilla.org/en-US/firefox/browsers/mobile/focus/",
@@ -108,7 +109,6 @@ export const TOOL_LIST = [
     id: 8,
     nom: "Authy",
     url: "authy",
-
     description:
       "Authy sets itself apart with its multi-device synchronization, allowing users to access their two-factor authentication codes from any device, enhancing convenience and security.",
     url_logo:
@@ -158,7 +158,7 @@ export const TOOL_LIST = [
   {
     id: 12,
     nom: "Electrum Wallet",
-    url: "",
+    url: "electrum wallet",
     badge: ["Opensource", "Bitcoinonly", "Ledgersupport", "Advanced"],
     description:
       " Electrum stands out by offering a lightweight Bitcoin wallet with features like cold storage and multisig functionality, appealing to advanced users.",
@@ -389,7 +389,7 @@ export const TOOL_LIST = [
   },
   {
     id: 29,
-    nom: "Yubico Auth",
+    nom: "Yubico Authentificator",
     url: "yubico-authenticator",
     badge: ["Ourchoice", "Yubikeys"],
     type: "2FA",
@@ -438,7 +438,7 @@ export const TOOL_LIST = [
     url_logo:
       "https://tool-image.s3.eu-north-1.amazonaws.com/logo_tools/qwant.webp",
     url_img:
-      "https://tool-image.s3.eu-north-1.amazonaws.com/img_tools/cryptomatorfull.webp",
+      "https://tool-image.s3.eu-north-1.amazonaws.com/img_tools/qwantfull.webp",
     link: "https://www.qwant.com/",
   },
   {
@@ -452,7 +452,7 @@ export const TOOL_LIST = [
     url_logo:
       "https://tool-image.s3.eu-north-1.amazonaws.com/logo_tools/startpage.webp",
     url_img:
-      "https://tool-image.s3.eu-north-1.amazonaws.com/img_tools/cryptomatorfull.webp",
+      "https://tool-image.s3.eu-north-1.amazonaws.com/img_tools/startpagefull.webp",
     link: "https://www.startpage.com/fr/",
   },
   {
@@ -632,7 +632,7 @@ export const TOOL_LIST = [
   {
     id: 49,
     nom: "Time Guardian",
-    url: "Adguard",
+    url: "time-guardian",
     description:
       "Time Guardian offers a novel concept of a digital time capsule, using blockchain technology to ensure the longevity and authenticity of stored data.",
     url_logo:
@@ -644,7 +644,7 @@ export const TOOL_LIST = [
   {
     id: 50,
     nom: "Relai.app",
-    url: "Adguard",
+    url: "relai-app",
     badge: ["Bitcoin", "Spot"],
     description:
       "Unique in its simplicity, Relai allows for Bitcoin investment via straightforward bank transfers, emphasizing ease of use with no need for registration or KYC.",
@@ -719,7 +719,7 @@ export const TOOL_LIST = [
   {
     id: 56,
     nom: "Spectre.app",
-    url: "Spectreapp",
+    url: "Spectre-app",
     description:
       "Spectre stands out by using a deterministic algorithm to generate passwords on the fly from your master password, site name, and your username, ensuring you never need to store passwords.",
     url_logo:
@@ -731,7 +731,7 @@ export const TOOL_LIST = [
   {
     id: 57,
     nom: "Escalidraw",
-    url: "Spectreapp",
+    url: "escalidraw",
     badge: ["Opensource", "Local", "", ""],
     description:
       "Escalidraw distinguishes itself with a focus on simplicity and privacy, offering an intuitive interface for sketching diagrams and collaborative drawing with real-time sync.",
@@ -866,7 +866,7 @@ export const TOOL_LIST = [
   {
     id: 68,
     nom: "Nvidia Broadcast",
-    url: "wise",
+    url: "nvidia-broadcast",
     description:
       "NVIDIA Broadcast stands out with AI-powered audio and video enhancements, tailored specifically for content creators looking to improve their production quality.",
     url_logo:
@@ -878,7 +878,7 @@ export const TOOL_LIST = [
   {
     id: 69,
     nom: "DaVinci Resolve",
-    url: "wise",
+    url: "davinci-resolve",
     description:
       "Known for its professional-grade video editing capabilities, DaVinci Resolve offers extensive color grading and audio post-production tools, catering to filmmakers and video professionals.",
     url_logo:
@@ -890,7 +890,7 @@ export const TOOL_LIST = [
   {
     id: 70,
     nom: "OBS",
-    url: "wise",
+    url: "obs",
     description:
       "OBS provides a powerful, open-source solution for video recording and live streaming, featuring extensive customization and compatibility with multiple streaming services.",
     url_logo:
@@ -902,7 +902,7 @@ export const TOOL_LIST = [
   {
     id: 71,
     nom: "Audacity",
-    url: "wise",
+    url: "audacity",
     description:
       "Audacity is unique for its accessibility and comprehensive set of audio editing tools, making it widely used for podcasting, music recording, and audio editing.",
     url_logo:
@@ -914,7 +914,7 @@ export const TOOL_LIST = [
   {
     id: 72,
     nom: "CapCut",
-    url: "wise",
+    url: "capcut",
     description:
       "CapCut offers mobile users powerful video editing tools in a user-friendly interface, making it ideal for quick edits on the go.",
     url_logo:
@@ -926,7 +926,7 @@ export const TOOL_LIST = [
   {
     id: 73,
     nom: "Hat.sh",
-    url: "wise",
+    url: "hat-sh",
     description:
       "Hat.sh provides easy-to-use, secure file encryption directly in your browser, supporting strong encryption standards to protect files before they are shared or stored.",
     url_logo:
@@ -938,7 +938,7 @@ export const TOOL_LIST = [
   {
     id: 74,
     nom: "Skiff Mail",
-    url: "wise",
+    url: "skiff-mail",
     badge: ["Opensource"],
     description:
       "Skiff Mail prioritizes security with end-to-end encryption for email communication, standing out with features like message recall and automatic destruction.",
@@ -976,7 +976,7 @@ export const TOOL_LIST = [
   {
     id: 77,
     nom: "Arc",
-    url: "element",
+    url: "arc",
     description:
       "Arc distinguishes itself with a design-centric approach, aiming to reinvigorate the web browsing experience with a focus on usability and customization.",
     url_logo:
@@ -1025,7 +1025,7 @@ export const TOOL_LIST = [
   {
     id: 81,
     nom: "Tangem",
-    url: "Tangem",
+    url: "tangem",
     badge: ["HardwareWallet", "Allcrypto"],
     description:
       "Tangem introduces a card-shaped cold wallet for cryptocurrencies, supporting over 6000 coins and tokens with robust security features to give users full control of their private keys.",
@@ -1040,7 +1040,7 @@ export const TOOL_LIST = [
   {
     id: 82,
     nom: "Rabby Wallet",
-    url: "Rabby",
+    url: "Rabby-wallet",
     badge: ["Opensource"],
     description:
       "Rabby Wallet excels in managing digital identities and blockchain interactions, providing a streamlined and secure interface for managing multiple blockchain accounts.",
@@ -1053,7 +1053,7 @@ export const TOOL_LIST = [
   {
     id: 83,
     nom: "Draw.io",
-    url: "drawio",
+    url: "draw-io",
     badge: ["Opensource", "Local"],
     description:
       "Draw.io is known for its versatility in creating diagrams and flowcharts directly in the browser, offering an extensive array of templates and tools for rapid visual planning.",
@@ -1066,7 +1066,7 @@ export const TOOL_LIST = [
   {
     id: 84,
     nom: "Blockstream Jade",
-    url: "jade",
+    url: "blockstream-jade",
     badge: ["Opensource", "Bitcoinonly"],
     description:
       "Blockstream Jade offers a unique open-source hardware wallet for Bitcoin, focusing on enhanced security features like full node support and two-factor authentication.",
@@ -1080,7 +1080,7 @@ export const TOOL_LIST = [
   {
     id: 85,
     nom: "SecuX XSEED Plus",
-    url: "xseed",
+    url: "secux-xseed-plus",
     badge: [""],
     description:
       " SecuX XSEED Plus offers robust security for backing up seed phrases, using tamper-evident materials to ensure that recovery phrases are securely stored.",
@@ -1093,7 +1093,7 @@ export const TOOL_LIST = [
   {
     id: 86,
     nom: "Cryptotag Zeus",
-    url: "Zeus",
+    url: "cryptotag-zeus",
     badge: ["Bitcoin"],
     description:
       "Cryptotag Zeus provides a unique solution for physically backing up cryptocurrency keys using extremely durable materials to withstand extreme conditions.",
@@ -1132,7 +1132,7 @@ export const TOOL_LIST = [
   {
     id: 89,
     nom: "Revoke.cash",
-    url: "revoke",
+    url: "revoke-cash",
     badge: [],
     description:
       "Revoke.cash allows users to manage and revoke permissions for smart contracts on Ethereum, enhancing security and control over",
@@ -1145,7 +1145,7 @@ export const TOOL_LIST = [
   {
     id: 90,
     nom: "Mistral.ai",
-    url: "Mistral",
+    url: "Mistral-ai",
     badge: [],
     description:
       "Mistral.ai offers advanced data analytics and visualization tools, supporting queries and data sharing across multiple blockchain platforms for enhanced market analysis.",

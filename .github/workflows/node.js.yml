@@ -29,5 +29,5 @@ jobs:
       run: npm run build --if-present
       
     - name: Change Directory
-      run: cd /home/louism/actions-runner/_work/Shadcn-Tool
+      run: cd /home/louism/actions-runner/_work/Shadcn-tool
     - run: pm2 reload 0 

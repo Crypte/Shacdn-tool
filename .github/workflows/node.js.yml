@@ -26,7 +26,7 @@ jobs:
           username: ${{ secrets.USERNAME }} # Your server's username
           key: ${{ secrets.SSH_PRIVATE_KEY }} # Your server's SSH private key
           script: |
-            cd /path/to/your/application/directory # Specify the path to your app directory on the server
+            cd /var/www/Shadcn-tool
             git pull
             npm install
             npm run build

@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -59,11 +57,11 @@
   }
 }
 
-.container{
-  max-width: 1200px;
+.container {
+  max-width: 1300px;
 }
 
- /* Carrousel */
+/* Carrousel */
 /* Default styles for larger screens */
 .scroller {
   overflow: hidden;
@@ -84,7 +82,6 @@
   animation: 50s slide infinite linear;
 }
 
-
 .gradient-background {
   width: calc(100vw / 3);
   height: calc(100vh / 3);
@@ -102,55 +99,71 @@
 
 @media only screen and (max-width: 600px) {
   .scroller {
-      max-width: 100%;
+    max-width: 100%;
   }
 }
 
-@media screen and (max-width : 1024px){
-  p,h1,h2,h3,h4,span{
-      font-size: 80%;
-      overscroll-behavior: none;
+@media screen and (max-width: 1024px) {
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  span {
+    font-size: 80%;
+    overscroll-behavior: none;
   }
 }
 
 @keyframes slide {
   from {
-      transform: translateX(0);
+    transform: translateX(0);
   }
   to {
-      transform: translateX(-200%);
+    transform: translateX(-200%);
   }
 }
 
-.danger{
-  @apply bg-red-400/20 border-[#EF4C62]
+.danger {
+  @apply bg-red-400/20 border-[#EF4C62];
 }
 
-.warning{
-  @apply bg-yellow-400/20 border-[#FDC02A]
+.warning {
+  @apply bg-yellow-400/20 border-[#FDC02A];
 }
 
-.information{
-  @apply bg-blue-400/20 border-[#346DDB]
+.information {
+  @apply bg-blue-400/20 border-[#346DDB];
 }
 
-.check{
-  @apply bg-green-400/20 border-[#33D29D]
+.check {
+  @apply bg-green-400/20 border-[#33D29D];
 }
-
 
 .red {
-  background: radial-gradient(ellipse at center, rgb(252, 219, 3) 0%, var(--background-gradient) 100%);
+  background: radial-gradient(
+    ellipse at center,
+    rgb(252, 219, 3) 0%,
+    var(--background-gradient) 100%
+  );
   animation: rotateBackground 40s linear infinite;
 }
 
 .blue {
-  background: radial-gradient(ellipse at center, rgb(233, 233, 233) 0%, var(--background-gradient)100%);
+  background: radial-gradient(
+    ellipse at center,
+    rgb(233, 233, 233) 0%,
+    var(--background-gradient) 100%
+  );
   animation: rotateBackground 20s linear infinite;
 }
 
 .green {
-  background: radial-gradient(ellipse at center, rgb(127, 122, 57) 0%, var(--background-gradient) 100%);
+  background: radial-gradient(
+    ellipse at center,
+    rgb(127, 122, 57) 0%,
+    var(--background-gradient) 100%
+  );
   animation: rotateBackground 10s linear infinite;
 }
 
@@ -160,4 +173,5 @@
   }
   to {
     transform: rotate(360deg);
-  }}
+  }
+}

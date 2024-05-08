@@ -927,6 +927,7 @@ export const TOOL_LIST = [
     id: 73,
     nom: "Hat.sh",
     url: "hat-sh",
+    badge: ["Opensource"],
     description:
       "Hat.sh provides easy-to-use, secure file encryption directly in your browser, supporting strong encryption standards to protect files before they are shared or stored.",
     url_logo:

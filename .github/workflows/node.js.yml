@@ -1,33 +1,33 @@
-name: Node.js CI
+name: Deployment Workflow
 
 on:
   push:
     branches: [ "master" ]
 
 jobs:
-  build:
-    runs-on: self-hosted
-    
-    strategy:
-      matrix:
-        node-version: [20.10.0]
-    
+  deploy:
+    runs-on: ubuntu-latest
+
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
+      - name: Install dependencies
+        run: npm install
 
-    - name: Install dependencies
-      run: npm ci
-      
-    - name: Build
-      run: npm run build --if-present
-      
-    - name: Change Directory
-      run: cd /home/louism/actions-runner/_work/Shadcn-tool/Shadcn-tool
-    - run: pm2 reload 0 
+      - name: Build Next.js app
+        run: npm run build
+
+      - name: SSH Deploy
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}  # Your server's IP address
+          username: ${{ secrets.USERNAME }}  # Your server's username
+          key: ${{ secrets.SSH_PRIVATE_KEY }}  # Your server's SSH private key
+          script: |
+            npm install -g pm2
+            cd /var/www/Shadcn-tool
+            git pull
+            npm install
+            npm run build
+            pm2 restart Shadcn-tool

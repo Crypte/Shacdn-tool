@@ -12,6 +12,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
       - name: Install dependencies
         run: npm install
 
@@ -19,15 +24,15 @@ jobs:
         run: npm run build
 
       - name: SSH Deploy
-        # Use the 'appleboy/ssh-action' action for SSH deployment
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrets.HOST }} # Your server's IP address
-          username: ${{ secrets.USERNAME }} # Your server's username
-          key: ${{ secrets.SSH_PRIVATE_KEY }} # Your server's SSH private key
+          host: ${{ secrets.HOST }}  # Your server's IP address
+          username: ${{ secrets.USERNAME }}  # Your server's username
+          key: ${{ secrets.SSH_PRIVATE_KEY }}  # Your server's SSH private key
           script: |
+            npm install -g pm2
             cd /var/www/Shadcn-tool
             git pull
             npm install
             npm run build
-            pm2 restart Shadcn-tool 
+            pm2 restart Shadcn-tool

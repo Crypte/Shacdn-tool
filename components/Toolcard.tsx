@@ -1,12 +1,11 @@
+import { TOOL_LIST } from "@/constants/tool_data";
+import { ExternalLink } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Badge } from "./Badge";
 import { Platform } from "./Platform";
-import { PartyPopper } from "lucide-react";
-import { ExternalLink } from "lucide-react";
 import { AspectRatio } from "./ui/aspect-ratio";
 import { Card } from "./ui/card";
-import { TOOL_LIST } from "@/constants/tool_data";
 
 type ToolcardProps = {
   id: number;
@@ -50,7 +49,7 @@ export default function Toolcard({ id }: ToolcardProps) {
                 </div>
               </div>
 
-              <div className="flex lg:ml-2">
+              <div className="flex ml-2">
                 <div className="mr-5">
                   <Image
                     className="rounded-2xl"

@@ -1,33 +1,11 @@
-import Link from "next/link";
-import Image from "next/image";
+import { Siteconfig } from "@/config/site";
+import { NAV_BAR } from "@/constants";
 import { ChevronDown } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 import { BsTwitterX } from "react-icons/bs";
 import { ThemeSwitch } from "./Theme-switch";
 import { Button } from "./ui/button";
-import { NAV_BAR } from "@/constants";
-import { Siteconfig } from "@/config/site";
-
-import {
-  EyeOff,
-  Compass,
-  Search,
-  ShieldX,
-  Mail,
-  MessageCircle,
-  FormInput,
-  CheckCheck,
-  ShieldCheck,
-  CircuitBoard,
-  Wallet,
-  Coins,
-  PackageCheck,
-  UploadCloud,
-  FileKey,
-  Eraser,
-  BrainCircuit,
-  StickyNote,
-  Users,
-} from "lucide-react";
 
 export const Navbar = () => {
   return (

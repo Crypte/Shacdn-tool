@@ -12,16 +12,21 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build Next.js app
+        run: npm run build
+
       - name: SSH Deploy
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrets.HOST }}  # Your server's IP address
-          username: ${{ secrets.USERNAME }}  # Your server's username
-          key: ${{ secrets.SSH_PRIVATE_KEY }}  # Your server's SSH private key
+          host: ${{ secrets.HOST }} # Your server's IP address
+          username: ${{ secrets.USERNAME }} # Your server's username
+          key: ${{ secrets.SSH_PRIVATE_KEY }} # Your server's SSH private key
           script: |
             cd /var/www/Shadcn-tool
-            pm2 stop Shadcn-tool
             git pull
             npm install
             npm run build
-            pm2 reload Shadcn-tool
+            pm2 restart Shadcn-tool

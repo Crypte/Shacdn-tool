@@ -1183,15 +1183,15 @@ export const TOOL_LIST = [
   },
   {
     id: 93,
-    nom: "Github Copilot",
-    url: "github-copilot",
+    nom: "Ollama",
+    url: "ollama",
     badge: [],
     description:
-      "GitHub Copilot stands out by offering AI-powered coding assistance, helping developers write code faster and more efficiently by suggesting entire lines or blocks of code.",
+      "Ollama allows you to run with 2 clicks a variety of AI models locally and customize them for your specific needs.",
     url_logo:
-      "https://tool-image.s3.eu-north-1.amazonaws.com/logo_tools/githubcopilot.webp",
+      "https://tool-image.s3.eu-north-1.amazonaws.com/logo_tools/ollama.webp",
     url_img:
-      "https://tool-image.s3.eu-north-1.amazonaws.com/img_tools/githubcopilotfull.webp",
+      "https://tool-image.s3.eu-north-1.amazonaws.com/img_tools/ollamafull.webp",
     link: "https://github.com/features/copilot",
   },
 ];

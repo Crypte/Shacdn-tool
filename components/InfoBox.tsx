@@ -1,6 +1,5 @@
-import React, { ReactNode } from "react";
-import { AlertCircle, CheckCircle2, AlertTriangle, Info } from "lucide-react";
-
+import { AlertCircle, AlertTriangle, CheckCircle2, Info } from "lucide-react";
+import { ReactNode } from "react";
 interface InfoBoxProps {
   children: ReactNode;
   variant: string;
@@ -41,7 +40,7 @@ export const InfoBox = ({ children, variant, title }: InfoBoxProps) => {
         <p>{boxIcon}</p>
         <p>{title}</p>
       </div>
-      <p className=" text-base">{children}</p>
+      <p>{children}</p>
     </div>
   );
 };

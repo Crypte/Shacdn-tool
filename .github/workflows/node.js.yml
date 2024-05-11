@@ -26,12 +26,14 @@ jobs:
       - name: SSH Deploy
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrets.HOST }} # Your server's IP address
-          username: ${{ secrets.USERNAME }} # Your server's username
-          key: ${{ secrets.SSH_PRIVATE_KEY }} # Your server's SSH private key
+          host: ${{ secrets.HOST }} 
+          username: ${{ secrets.USERNAME }} 
+          key: ${{ secrets.SSH_PRIVATE_KEY }} 
           script: |
             cd /var/www/Shadcn-tool
             git pull
+            nvm install node
+            nvm use node
             npm install
             npm run build
             pm2 restart Shadcn-tool

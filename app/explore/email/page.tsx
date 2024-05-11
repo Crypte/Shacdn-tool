@@ -1,6 +1,6 @@
-import ToolGrid from "@/components/ToolGrid";
 import { H1 } from "@/components/H1";
 import { P } from "@/components/P";
+import ToolGrid from "@/components/ToolGrid";
 
 export default function Page() {
   const email = [1, 2, 74];
@@ -8,7 +8,6 @@ export default function Page() {
   return (
     <div>
       <H1>Email</H1>
-      <H1>Test</H1>
       <P>
         Les fournisseurs de messagerie électronique axés sur la confidentialité
         offrent une protection renforcée des données, une confidentialité et une

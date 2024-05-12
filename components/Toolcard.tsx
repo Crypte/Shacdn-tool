@@ -19,14 +19,14 @@ export default function Toolcard({ id }: ToolcardProps) {
   }
   return (
     <>
-      <Card className="group hover:-translate-y-1 relative rounded-2xl lg:m-0 transition-all pb-2">
+      <Card className="group hover:-translate-y-1 relative rounded-2xl lg:m-0 transition-all pb-3">
         {toolData.link && (
           <Link
             href={toolData.link}
             target="_blank"
             className="p-2 flex flex-col"
           >
-            <div className="space-y-3 grow">
+            <div className="space-y-4 grow">
               <div className="relative">
                 <AspectRatio ratio={16 / 9}>
                   <Image
@@ -48,39 +48,40 @@ export default function Toolcard({ id }: ToolcardProps) {
                     ))}
                 </div>
               </div>
-
-              <div className="flex ml-2">
-                <div className="mr-5">
-                  <Image
-                    className="rounded-2xl"
-                    src={toolData.url_logo}
-                    alt={toolData.nom}
-                    width={64}
-                    height={64}
-                  />
-                </div>
-                <div className="h-18 flex flex-col justify-between">
-                  <h1 className="transition group-hover:underline text-2xl font-bold flex gap-2 items-center">
-                    {toolData.nom}
-                    <ExternalLink
-                      size={20}
-                      className="transition lg:opacity-0 lg:group-hover:opacity-100"
+              <div className="mx-2 space-y-4">
+                <div className="flex">
+                  <div className="mr-5">
+                    <Image
+                      className="rounded-2xl"
+                      src={toolData.url_logo}
+                      alt={toolData.nom}
+                      width={64}
+                      height={64}
                     />
-                  </h1>
+                  </div>
+                  <div className="h-18 flex flex-col justify-between">
+                    <h1 className="transition group-hover:underline text-2xl font-bold flex gap-2 items-center">
+                      {toolData.nom}
+                      <ExternalLink
+                        size={20}
+                        className="transition lg:opacity-0 lg:group-hover:opacity-100"
+                      />
+                    </h1>
 
-                  {toolData.platform && (
-                    <div className="pointer-events-none font-bold p-1 text-main flex gap-3 items-center border-2 rounded-full w-fit ">
-                      {toolData.platform.map((platform: any, index: any) => (
-                        <Platform variant={platform} key={index} />
-                      ))}
-                    </div>
-                  )}
+                    {toolData.platform && (
+                      <div className="pointer-events-none font-bold p-1 text-main flex gap-3 items-center border-2 rounded-full w-fit ">
+                        {toolData.platform.map((platform: any, index: any) => (
+                          <Platform variant={platform} key={index} />
+                        ))}
+                      </div>
+                    )}
+                  </div>
                 </div>
-              </div>
 
-              <p className="leading-6 text-sm text-muted-foreground px-2">
-                {toolData.description}
-              </p>
+                <p className="leading-6 text-sm text-muted-foreground">
+                  {toolData.description}
+                </p>
+              </div>
             </div>
           </Link>
         )}

@@ -19,7 +19,7 @@ export default function Toolcard({ id }: ToolcardProps) {
   }
   return (
     <>
-      <Card className="group hover:-translate-y-1 relative rounded-2xl lg:m-0 transition-all pb-3">
+      <Card className="group relative rounded-2xl lg:m-0 pb-3 hover:shadow-md transition-all">
         {toolData.link && (
           <Link
             href={toolData.link}

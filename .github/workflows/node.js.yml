@@ -2,7 +2,7 @@ name: Deployment Workflow
 
 on:
   push:
-    branches: [ "master" ]
+    branches: ["master"]
 
 jobs:
   deploy:
@@ -21,9 +21,9 @@ jobs:
       - name: SSH Deploy
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrets.HOST }} 
-          username: ${{ secrets.USERNAME }} 
-          key: ${{ secrets.SSH_PRIVATE_KEY }} 
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             sudo npm cache clean -f
             sudo npm install -g n

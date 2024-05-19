@@ -389,7 +389,7 @@ export const TOOL_LIST = [
   },
   {
     id: 29,
-    nom: "Yubico Authentificator",
+    nom: "Yubico Auth",
     url: "yubico-authenticator",
     badge: ["Ourchoice", "Yubikeys"],
     type: "2FA",

@@ -176,3 +176,15 @@
     transform: rotate(360deg);
   }
 }
+
+.heroimg {
+  overflow: hidden;
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    white 30%,
+    white 30%,
+    transparent
+  );
+  mask: linear-gradient(90deg, transparent, white 40%, white 60%, transparent);
+}

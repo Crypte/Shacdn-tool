@@ -7,7 +7,7 @@ export const Herosection = () => {
   return (
     <>
       <div className="py-24 lg:py-10 lg:pb-32 text-center">
-        <div className="max-w-3xl text-center mx-auto">
+        <div className="max-w-3xl text-center mx-auto py-8">
           <Badge variant={"outline"}>New</Badge>
           <h1 className="mt-3 scroll-m-20 text-5xl font-extrabold tracking-tight lg:text-7xl">
             Every tool you need in your life

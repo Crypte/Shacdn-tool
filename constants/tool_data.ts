@@ -1194,4 +1194,17 @@ export const TOOL_LIST = [
       "https://tool-image.s3.eu-north-1.amazonaws.com/img_tools/ollamafull.webp",
     link: "https://github.com/features/copilot",
   },
+  {
+    id: 94,
+    nom: "Boxcryptor",
+    url: "boxcryptor",
+    badge: [],
+    description:
+      "Boxcryptor offers end-to-end encryption for cloud storage services, allowing users to securely store and share files across multiple platforms with ease.",
+    url_logo:
+      "https://tool-image.s3.eu-north-1.amazonaws.com/logo_tools/ollama.webp",
+    url_img:
+      "https://tool-image.s3.eu-north-1.amazonaws.com/img_tools/ollamafull.webp",
+    link: "https://www.boxcryptor.com/",
+  },
 ];

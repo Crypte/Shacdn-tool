@@ -24,8 +24,6 @@ export default function Page() {
 
       <H2>Navigateur mobile</H2>
       <ToolGrid toolIds={NavigateurMobile} />
-
-      <H1>Moteur de recherche</H1>
     </div>
   );
 }

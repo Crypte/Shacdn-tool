@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import { ReactNode } from "react";
 
 interface H2Props {
   className?: string;
@@ -9,7 +9,7 @@ interface H2Props {
 export const H2 = ({ className, children }: H2Props) => {
   return (
     <h2
-      className={`mt-10 scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0 ${className}`}
+      className={`mt-10 scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0 w-fit ${className}`}
     >
       {children}
     </h2>

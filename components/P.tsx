@@ -8,7 +8,7 @@ interface PProps {
 export const P = ({ className, children }: PProps) => {
   return (
     <p
-      className={`md:leading-7 leading-6 [&:not(:first-child)]:mt-6 text-muted-foreground ${className}`}
+      className={`md:leading-7 leading-6 [&:not(:first-child)]:mt-5 text-muted-foreground ${className}`}
     >
       {children}
     </p>

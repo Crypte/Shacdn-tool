@@ -3,12 +3,11 @@ import { AspectRatio } from "./ui/aspect-ratio";
 
 export const HeroGrid = () => {
   return (
-    <div className="relative mt-20 rounded-lg p-6">
-      <div className="absolute z-[-1] w-3/4 h-full rounded-full bg-gradient-to-tl from-purple-400 to-red-400 blur-3xl translate-y-[-30%] dark:opacity-20 opacity-60 left-1/2 transform -translate-x-1/2" />
+    <div className="relative rounded-lg p-6 overflow-x-hidden">
       <AspectRatio ratio={16 / 9}>
-        <div className="relative">
+        <div>
           <Image
-            className="rounded-3xl object-cover heroimg mx-auto min-w-[900px] w-full h-auto "
+            className=" absolute right-1/2 translate-x-1/2 rounded-3xl object-cover heroimg mx-auto min-w-[700px] h-fit "
             src={"/herogrid.png"}
             alt="Tool logo"
             width={1920}

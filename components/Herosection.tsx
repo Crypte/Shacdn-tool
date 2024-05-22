@@ -5,9 +5,9 @@ import { Button } from "./ui/button";
 export const Herosection = () => {
   return (
     <>
-      <div className="py-24 lg:py-10 lg:pb-32 text-center">
+      <div className="py-10 lg:py-20 text-center">
         <div className="max-w-3xl relative text-center mx-auto py-8">
-          <div className="absolute z-[-1] w-3/4 h-full rounded-full bg-gradient-to-tl from-purple-400 to-red-400 blur-3xl dark:opacity-20 opacity-60 left-1/2 transform -translate-x-1/2" />
+          <div className="absolute z-[-1] w-full h-full rounded-2xl bg-gradient-to-tl from-purple-400 to-red-400 blur-3xl dark:opacity-20 opacity-60 left-1/2 transform -translate-x-1/2 translate-y-40" />
           <Badge variant={"outline"}>New</Badge>
           <h1 className="mt-3 scroll-m-20 text-5xl font-extrabold tracking-tight lg:text-7xl">
             Every tool you need in your life

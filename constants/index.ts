@@ -129,7 +129,7 @@ export const NAV_BAR = [
       {
         label: "Explorateur",
         icon: PackageCheck,
-        href: "/category/categoryr",
+        href: "/category/explorer",
         title: "Explorateurs",
         subtitle: "Ne loupez rien on chain.",
       },
